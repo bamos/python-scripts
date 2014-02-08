@@ -22,9 +22,9 @@ user = ENTER_USER
 pw = ENTER_PW # Please use an application-specific password for security!
 email_to = ENTER_TO_EMAIL
 email_from = ENTER_FROM_EMAIL
-url = ENTER_URL
+root_url = ENTER_URL
 
-cmd = ["linkchecker", "--no-warnings", "--no-status", url]
+cmd = ["linkchecker", "--no-warnings", "--no-status", root_url]
 output = Popen(cmd, stdout=PIPE).communicate()[0].decode("UTF-8")
 
 bad_urls = []
@@ -38,7 +38,7 @@ for line in output.splitlines():
       bad_urls.append((current_url, parent_url, current_result))
 
 if bad_urls:
-  message_contents = "Error checking links for " + url + "\n\n"
+  message_contents = "Error checking links for " + root_url + "\n\n"
   for url in bad_urls:
     message_contents += "\n".join(url)+"\n\n"
 
@@ -50,7 +50,7 @@ if bad_urls:
   multi_msg = MIMEMultipart()
   multi_msg['From'] = email_to
   multi_msg['To'] = email_from
-  multi_msg['Subject'] = "Bad links on " + url + "."
+  multi_msg['Subject'] = "Bad links on " + root_url + "."
   multi_msg.attach(MIMEText(message_contents))
   server.sendmail(email_to, email_from, multi_msg.as_string())
 
