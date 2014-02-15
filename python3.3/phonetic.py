@@ -39,6 +39,7 @@ phonetic_table = {
 
 for word in sys.argv[1:]:
   for char in word:
-    if char not in phonetic_table: print(char.lower())
-    else: print(char.lower() + ' - ' + phonetic_table[char])
+    char = char.lower()
+    if char not in phonetic_table: print(char)
+    else: print(char + ' - ' + phonetic_table[char])
   print()
