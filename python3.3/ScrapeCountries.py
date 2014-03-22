@@ -63,7 +63,7 @@ class CountryParser(html.parser.HTMLParser):
     self.__numCols = numCols
     self.__extractionMap = extractionMap
     self.__exceptions = exceptions
-    
+
     # Maintain our position within tags.
     self.__in_tr = False
     self.__in_td = False
@@ -92,7 +92,7 @@ class CountryParser(html.parser.HTMLParser):
         self.__possible_data.append("")
     elif tag == "td":
       self.__in_td = True
-    
+
   def handle_endtag(self, tag):
     if tag == "tr":
       self.__in_tr = False
@@ -117,7 +117,7 @@ class CountryParser(html.parser.HTMLParser):
     elif tag == "td":
       self.__in_td = False
       self.__td_position += 1
-      
+
   # If our criteria match, we know our position in the table.
   # Keep track of the data.
   def handle_data(self, data):

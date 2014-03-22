@@ -59,7 +59,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 227, "Incorrect number of lines."
 
@@ -70,7 +70,7 @@ try:
   assert afghanistan[0] == "Afghanistan", "Incorrect content (1)."
   assert afghanistan[1] == "أفغانستان", "Incorrect content (2)."
   assert afghanistan[2] == "Afghanestan", "Incorrect content (3)."
-  
+
   zimbabwe = lines[226].split("\t")
   assert zimbabwe[0] == "Zimbabwe", "Incorrect content (4)."
   assert zimbabwe[1] == "زمبابوي", "Incorrect content (5)."
@@ -95,12 +95,12 @@ except Exception as err:
 try:
   f = open(outName, "rb")
   countryData = pickle.load(f)
-  
+
   afghanistan = countryData[0]
   assert afghanistan[0] == "Afghanistan", "Incorrect content (1)."
   assert afghanistan[1] == "أفغانستان", "Incorrect content (2)."
   assert afghanistan[2] == "Afghanestan", "Incorrect content (3)."
-  
+
   zimbabwe = countryData[226]
   assert zimbabwe[0] == "Zimbabwe", "Incorrect content (4)."
   assert zimbabwe[1] == "زمبابوي", "Incorrect content (5)."
@@ -125,7 +125,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 205, "Incorrect number of lines."
 
@@ -161,7 +161,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 247, "Incorrect number of lines."
 
@@ -195,7 +195,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 237, "Incorrect number of lines."
 
@@ -229,7 +229,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 250, "Incorrect number of lines."
 
@@ -261,7 +261,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 250, "Incorrect number of lines."
 
@@ -294,7 +294,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 227, "Incorrect number of lines."
 
@@ -327,7 +327,7 @@ except Exception as err:
 subsection("Checking output.")
 try:
   output = open(outName, encoding="utf8")
-  
+
   # 1. Check number of lines.
   assert countLines(output) == 237, "Incorrect number of lines."
 
