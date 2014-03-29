@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 #
 # EvalExprTest.py
 # Tests for the EvalExpr.py module.

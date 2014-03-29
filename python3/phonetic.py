@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 #
 # phonetic.py
 # Obtain the NATO phonetic alphabet representation from short phrases.
