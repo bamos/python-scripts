@@ -2,6 +2,8 @@
 A collection of simple Python scripts.
 
 ## Listings
+### Python 2.7
++ `music-organizer.py`. Organizes my music directory.
 ### Python 3
 + [EvalExpr.py][eval-post].
   A module to evaluate a mathematical expression using Python's AST.
