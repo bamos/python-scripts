@@ -5,18 +5,12 @@ import re
 import sys
 from mutagen.easyid3 import EasyID3
 
-replaceChars = (
-  (" ", "-"),
-  ("(", ""),
-  (")", ""),
-  (",", ""),
-  (".", ""),
-  ("'", ""),
-  ("?", "")
-)
+emptyChars = re.compile(r"[(),.'\\\?]")
 def toNeat(s):
   s = s.lower()
-  for r in replaceChars: s = s.replace(r[0], r[1])
+  s = s.replace(" ", "-")
+  s = s.replace("&", "and")
+  s = emptyChars.sub("", s)
   search = re.search("[^0-9a-z\-]", s)
   if search:
     print("Error: Unrecognized character in '" + s + "'")
@@ -24,27 +18,41 @@ def toNeat(s):
   return s
 
 for dirname, dirnames, filenames in os.walk('.'):
-  for subdirname in dirnames:
-    print("subdir:" + str(subdirname))
+  # Move all the files to the root directory.
   for filename in filenames:
-    fullPath = os.path.join(dirname, filename)
-    print("file: " + str(fullPath))
-    audio = EasyID3(fullPath)
-    title = audio['title'][0].decode()
-    print("  title: " + title)
-
-    neatTitle = toNeat(title)
-    print("  neat-title: " + neatTitle)
-
     ext = os.path.splitext(filename)[1]
-    newFullPath = os.path.join(dirname, neatTitle + ext)
-    print("  newFullPath: " + newFullPath)
+    if ext == ".mp3":
+      fullPath = os.path.join(dirname, filename)
+      print("file: " + str(fullPath))
+      audio = EasyID3(fullPath)
+      title = audio['title'][0].decode()
+      print("  title: " + title)
 
-    if newFullPath != fullPath:
-      if os.path.isfile(newFullPath):
-        print("Error: File exists: '" + newFullPath + "'")
+      if not title:
+        print("Error: title not found for '" + filename + "'")
         sys.exit(-42)
 
-      os.rename(fullPath, newFullPath)
+      neatTitle = toNeat(title)
+      print("  neat-title: " + neatTitle)
+
+      newFullPath = os.path.join(".", neatTitle + ext) # Remove subdirectories.
+      print("  newFullPath: " + newFullPath)
+
+      if newFullPath != fullPath:
+        if os.path.isfile(newFullPath):
+          print("Error: File exists: '" + newFullPath + "'")
+          sys.exit(-42)
+
+        os.rename(fullPath, newFullPath)
+      os.chmod(newFullPath, 0644)
+    elif ext == ".pdf":
+      pass
+    else:
+      print("Error: Unrecognized file extension in '" + filename + "'")
+      sys.exit(-42)
+
+  # Delete all subdirectories.
+  for subdirname in dirnames:
+    os.rmdir(subdirname)
 
 print("\nComplete!")
