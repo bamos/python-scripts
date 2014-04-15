@@ -7,9 +7,7 @@ from mutagen.easyid3 import EasyID3
 
 emptyChars = re.compile(r"[(),.'\\\?]")
 def toNeat(s):
-  s = s.lower()
-  s = s.replace(" ", "-")
-  s = s.replace("&", "and")
+  s = s.lower().replace(" ", "-").replace("&", "and")
   s = emptyChars.sub("", s)
   search = re.search("[^0-9a-z\-]", s)
   if search:
