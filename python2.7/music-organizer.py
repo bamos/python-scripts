@@ -17,7 +17,7 @@ replaceChars = (
 def toNeat(s):
   s = s.lower()
   for r in replaceChars: s = s.replace(r[0], r[1])
-  search = re.search("[^a-z\-]", s)
+  search = re.search("[^0-9a-z\-]", s)
   if search:
     print("Error: Unrecognized character in '" + s + "'")
     sys.exit(-42)
