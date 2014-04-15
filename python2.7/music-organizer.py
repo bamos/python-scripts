@@ -2,10 +2,11 @@
 
 import os
 import re
+import shutil
 import sys
 from mutagen.easyid3 import EasyID3
 
-emptyChars = re.compile(r"[(),.'\\\?]")
+emptyChars = re.compile(r"[(),.'\\\?\#]")
 def toNeat(s):
   s = s.lower().replace(" ", "-").replace("&", "and")
   s = emptyChars.sub("", s)
@@ -15,6 +16,7 @@ def toNeat(s):
     sys.exit(-42)
   return s
 
+delete_dirs = []
 for dirname, dirnames, filenames in os.walk('.'):
   # Move all the files to the root directory.
   for filename in filenames:
@@ -22,9 +24,12 @@ for dirname, dirnames, filenames in os.walk('.'):
     if ext == ".mp3":
       fullPath = os.path.join(dirname, filename)
       print("file: " + str(fullPath))
-      audio = EasyID3(fullPath)
-      title = audio['title'][0].decode()
-      print("  title: " + title)
+
+      try:
+        audio = EasyID3(fullPath)
+        title = audio['title'][0].decode()
+        print("  title: " + title)
+      except: title = None
 
       if not title:
         print("Error: title not found for '" + filename + "'")
@@ -51,6 +56,9 @@ for dirname, dirnames, filenames in os.walk('.'):
 
   # Delete all subdirectories.
   for subdirname in dirnames:
-    os.rmdir(subdirname)
+    delete_dirs.append(subdirname)
+
+for d in delete_dirs:
+  shutil.rmtree(d,ignore_errors=True)
 
 print("\nComplete!")
