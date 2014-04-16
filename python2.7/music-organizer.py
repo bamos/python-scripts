@@ -16,6 +16,31 @@ def toNeat(s):
     sys.exit(-42)
   return s
 
+artists = set()
+valid = {"yes":True, "y":True, "no":False, "n":False}
+for dirname, dirnames, filenames in os.walk('.'):
+  # Make sure there aren't a lot of different artists
+  # in case this was called from the wrong directory.
+  for filename in filenames:
+    try:
+      audio = EasyID3(os.path.join(dirname, filename))
+      artist = audio['artist'][0].decode()
+      artists.add(artist)
+    except:
+      pass
+
+if len(artists) > 2:
+  while True:
+    print("Warning: More than 2 artists found.")
+    print("This will move all songs to the current directory.")
+    print("Continue? yes/no")
+    choice = raw_input().lower()
+    if choice in valid:
+      if valid[choice]: break
+      else:
+        print("Exiting.")
+        sys.exit(-1)
+
 delete_dirs = []
 for dirname, dirnames, filenames in os.walk('.'):
   # Move all the files to the root directory.
