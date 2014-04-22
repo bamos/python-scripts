@@ -25,6 +25,9 @@ parser.add_argument('--delete-conflicts', action='store_true',
     delete them. Note this might always be best in case an artist
     has multiple versions. To keep multiple versions,
     fix the tag information.''')
+parser.add_argument('--ignore-multiple-artists', action='store_true',
+    dest='ignore_multiple_artists',
+    help='TODO')
 parser.add_argument('--collection', action='store_true',
     help='TODO')
 parser.add_argument('--artist',  action='store_true',
@@ -41,7 +44,7 @@ elif not (args.collection or args.artist):
 # Maps a string such as 'The Beatles' to 'the-beatles'.
 def toNeat(s):
   s = s.lower().replace("&","and")
-  s = re.sub(r"[()\[\],.'\\\?\#/\!]", "", s)
+  s = re.sub(r"[()\[\],.'\"\\\?\#/\!\$\:]", "", s)
   s = re.sub(r"[ \*\_]", "-", s)
   s = re.sub("-+", "-", s)
   search = re.search("[^0-9a-z\-]", s)
@@ -50,34 +53,36 @@ def toNeat(s):
     sys.exit(-42)
   return s
 
-def artist():
-  artists = set()
-  valid = {"yes":True, "y":True, "no":False, "n":False}
-  for dirname, dirnames, filenames in os.walk('.'):
-    # Make sure there aren't a lot of different artists
-    # in case this was called from the wrong directory.
-    for filename in filenames:
-      try:
-        audio = EasyID3(os.path.join(dirname, filename))
-        artist = audio['artist'][0].decode()
-        artists.add(artist)
-      except:
-        pass
+def artist(artistDir):
+  print("Organizing '" + artistDir + "'.")
+  if not args.ignore_multiple_artists:
+    artists = set()
+    for dirname, dirnames, filenames in os.walk(artistDir):
+      # Make sure there aren't a lot of different artists
+      # in case this was called from the wrong directory.
+      for filename in filenames:
+        try:
+          audio = EasyID3(os.path.join(dirname, filename))
+          artist = audio['artist'][0].decode()
+          artists.add(artist)
+        except:
+          pass
 
-  if len(artists) > 2:
-    while True:
-      print("Warning: More than 2 artists found.")
-      print("This will move all songs to the current directory.")
-      print("Continue? yes/no")
-      choice = raw_input().lower()
-      if choice in valid:
-        if valid[choice]: break
-        else:
-          print("Exiting.")
-          sys.exit(-1)
+    if len(artists) > 2:
+      while True:
+        print("Warning: More than 2 artists found in '" + artistDir + "'.")
+        print("This will move all songs to the '" + artistDir + "' directory.")
+        print("Continue? yes/no")
+        choice = raw_input().lower()
+        valid = {"yes":True, "y":True, "no":False, "n":False}
+        if choice in valid:
+          if valid[choice]: break
+          else:
+            print("Exiting.")
+            sys.exit(-1)
 
   delete_dirs = []
-  for dirname, dirnames, filenames in os.walk('.'):
+  for dirname, dirnames, filenames in os.walk(artistDir):
     # Move all the files to the root directory.
     for filename in filenames:
       ext = os.path.splitext(filename)[1]
@@ -87,7 +92,7 @@ def artist():
 
         try:
           audio = EasyID3(fullPath)
-          title = audio['title'][0].decode()
+          title = audio['title'][0].encode('ascii', 'ignore')
           print("  title: " + title)
         except: title = None
 
@@ -98,7 +103,7 @@ def artist():
         neatTitle = toNeat(title)
         print("  neat-title: " + neatTitle)
 
-        newFullPath = os.path.join(".", neatTitle + ext)
+        newFullPath = os.path.join(artistDir, neatTitle + ext)
         print("  newFullPath: " + newFullPath)
 
         if newFullPath != fullPath:
@@ -124,9 +129,12 @@ def artist():
       delete_dirs.append(subdirname)
 
   for d in delete_dirs:
-    shutil.rmtree(d,ignore_errors=True)
+    shutil.rmtree(os.path.join(artistDir,d),ignore_errors=True)
 
-  print("\nComplete!")
+def collection():
+  for d in os.listdir("."):
+    artist(d)
 
-if args.artist:
-  artist()
+if args.artist: artist('.')
+else: collection()
+print("\nComplete!")
