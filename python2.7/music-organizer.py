@@ -27,11 +27,16 @@ parser.add_argument('--delete-conflicts', action='store_true',
     fix the tag information.''')
 parser.add_argument('--ignore-multiple-artists', action='store_true',
     dest='ignore_multiple_artists',
-    help='TODO')
+    help='''This script will prompt for confirmation if an artist
+    directory has songs with more than 2 different tags.
+    This flag disables the confirmation and won't perform this check.''')
 parser.add_argument('--collection', action='store_true',
-    help='TODO')
+    help='''Operate in 'collection' mode and run 'artist' mode on
+    every subdirectory.''')
 parser.add_argument('--artist',  action='store_true',
-    help='TODO')
+    help='''Operate in 'artist' mode and copy all songs to the
+    root of the directory and cleanly format the names to
+    be easily typed and navigated in a shell.''')
 args = parser.parse_args()
 
 if args.collection and args.artist:
