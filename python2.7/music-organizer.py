@@ -59,7 +59,7 @@ def toNeat(s):
   return s
 
 def artist(artistDir):
-  print("Organizing '" + artistDir + "'.")
+  print("Organizing artist '" + artistDir + "'.")
   if not args.ignore_multiple_artists:
     artists = set()
     for dirname, dirnames, filenames in os.walk(artistDir):
@@ -106,7 +106,7 @@ def artist(artistDir):
           sys.exit(-42)
 
         neatTitle = toNeat(title)
-        print("  neat-title: " + neatTitle)
+        print("  neatTitle: " + neatTitle)
 
         newFullPath = os.path.join(artistDir, neatTitle + ext)
         print("  newFullPath: " + newFullPath)
@@ -136,10 +136,35 @@ def artist(artistDir):
   for d in delete_dirs:
     shutil.rmtree(os.path.join(artistDir,d),ignore_errors=True)
 
-def collection():
-  for d in os.listdir("."):
-    artist(d)
+def song(filename):
+  print("Organizing song '" + filename + "'.")
+  ext = os.path.splitext(filename)[1]
+  try:
+    audio = EasyID3(filename)
+    artist = audio['artist'][0].encode('ascii', 'ignore')
+    title = audio['title'][0].encode('ascii', 'ignore')
+    print("  artist: " + artist)
+    print("  title: " + title)
+  except:
+    artist = None
+    title = None
+  neatArtist = toNeat(artist)
+  neatTitle = toNeat(title)
+  print("  neatArtist: " + neatArtist)
+  print("  neatTitle: " + neatTitle)
+  if not os.path.isdir(neatArtist):
+    os.mkdir(neatArtist)
+  newFullPath = os.path.join(neatArtist,neatTitle+ext)
+  os.rename(filename, newFullPath)
+  os.chmod(newFullPath, 0644)
 
-if args.artist: artist('.')
-else: collection()
+def collection():
+  for f in os.listdir("."):
+    if os.path.isdir(f): artist(f)
+    elif os.path.isfile(f): song(f)
+
+if args.artist:
+  artist('.')
+else:
+  collection()
 print("\nComplete!")
