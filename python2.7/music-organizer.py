@@ -51,10 +51,21 @@ elif not (args.collection or args.artist):
 # Maps a string such as 'The Beatles' to 'the-beatles'.
 def toNeat(s):
   s = s.lower().replace("&","and")
-  s = re.sub(r"[()\[\],.'\"\\\?\#/\!\$\:]", "", s)
-  s = re.sub(r"[ \*\_]", "-", s)
+
+  # Put spaces between and remove blank characters.
+  blankCharsPad = r"()\[\],.\\\?\#/\!\$\:"
+  blankCharsNoPad = r"'\""
+  s = re.sub(r"([" + blankCharsPad + r"])([^ ])", "\\1 \\2", s)
+  s = re.sub("[" + blankCharsPad + blankCharsNoPad + "]", "", s)
+
+  # Replace spaces with a single dash.
+  s = re.sub(r"[ \*\_]+", "-", s)
   s = re.sub("-+", "-", s)
-  search = re.search("[^0-9a-z\-\=]", s)
+  s = re.sub("^-*", "", s)
+  s = re.sub("-*$", "", s)
+
+  # Ensure the string is only alphanumeric with dashes.
+  search = re.search("[^0-9a-z\-]", s)
   if search:
     print("Error: Unrecognized character in '" + s + "'")
     sys.exit(-42)
