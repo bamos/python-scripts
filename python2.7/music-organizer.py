@@ -52,7 +52,7 @@ def toNeat(s):
   s = re.sub(r"[()\[\],.'\"\\\?\#/\!\$\:]", "", s)
   s = re.sub(r"[ \*\_]", "-", s)
   s = re.sub("-+", "-", s)
-  search = re.search("[^0-9a-z\-]", s)
+  search = re.search("[^0-9a-z\-\=]", s)
   if search:
     print("Error: Unrecognized character in '" + s + "'")
     sys.exit(-42)
