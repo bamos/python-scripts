@@ -51,11 +51,12 @@ Tests are located in `ScrapeCountriesTest.py`.
 See the [blog post][country-post] for a more detailed overview.
 
 ```
-$ ScrapeCountries.py 'http://www.nationsonline.org/oneworld/countries_of_the_world.htm' countries.tsv && head -n 1 countries.tsv
+$ ScrapeCountries.py 'http://www.nationsonline.org/oneworld/countries_of_the_world.htm' countries.tsv
 Parsing countries of the world.
 Using 5 columns overall and extracting columns (1, 2, 3, 4).
 Finished extracting. Data written to 'countries.tsv'
 
+$ head -n 1 countries.tsv
 Afghanistan	Afghanistan	Afghanestan	South-Central Asia
 ```
 
