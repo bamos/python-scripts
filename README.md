@@ -9,7 +9,7 @@ with the location of the cloned repository.
 Furthermore, see my [dotfiles][dotfiles] repo for my
 complete system configurations.
 
-```
+```Bash
 # Add additional directories to the path.
 pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
@@ -34,7 +34,7 @@ Tests are located in `EvalExprTest.py`.
 See the [blog post][eval-post] for a more detailed overview.
 
 ```
-/EvalExpr.py '(((4+6)*10)<<2)'
+$ EvalExpr.py '(((4+6)*10)<<2)'
 (((4+6)*10)<<2) = 400
 ```
 
