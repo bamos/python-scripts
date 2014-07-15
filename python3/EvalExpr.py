@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # EvalExpr.py
 # A module to evaluate a mathematical expression using Python's AST.
 #
@@ -33,3 +34,11 @@ class EvalExpr:
       return self.varMap[node.id]
     else:
       raise TypeError(node)
+
+if __name__=="__main__":
+  import sys
+  if len(sys.argv) == 2:
+    expr = sys.argv[1]
+    print(expr + " = " + str(EvalExpr({}).evalExpr(expr)))
+  else:
+    print("Usage: ./EvalExpr.py <mathematical expression>")
