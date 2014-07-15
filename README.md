@@ -7,7 +7,7 @@ To add these to your `PATH`, clone the repo and add the following
 to your `bashrc` or `zshrc`, replacing `<python-scripts>`
 with the location of the cloned repository.
 Furthermore, see my [dotfiles][dotfiles] repo for my
-complete system configurations.
+complete OSX and Linux system configurations.
 
 ```Bash
 # Add additional directories to the path.
