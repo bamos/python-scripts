@@ -160,7 +160,9 @@ def song(filename):
 
 def collection():
   for f in os.listdir("."):
-    if os.path.isdir(f): artist(f)
+    if os.path.isdir(f):
+      if f != 'iTunes' and f != 'playlists':
+        artist(f)
     elif os.path.isfile(f): song(f)
 
 if args.artist:
