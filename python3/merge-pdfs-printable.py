@@ -42,6 +42,7 @@ def merge_pdfs(f_names):
 
 if __name__=='__main__':
   parser = argparse.ArgumentParser()
+  parser.add_argument('--modulo', type=int, default=2)
   parser.add_argument('pdf_files', type=str, nargs='+')
   args = parser.parse_args()
 
@@ -52,8 +53,10 @@ if __name__=='__main__':
   for f_path in args.pdf_files:
     result_f_names.append(f_path)
     pages = get_pages_in_pdf(f_path)
-    print(" + {}".format(f_path))
-    if pages % 2 != 0:
-      result_f_names.append(blank_file)
+    print(f_path)
+    print(" + Pages: {}".format(pages))
+    if pages % args.modulo != 0:
+      result_f_names = result_f_names + [blank_file]*(args.modulo-pages%args.modulo)
+    print(" + Added {} blank pages.".format(args.modulo-pages%args.modulo))
 
   merge_pdfs(result_f_names)
