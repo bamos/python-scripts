@@ -54,6 +54,10 @@ so that the printed pages won't overlap documents.
 The `modulo` option is helpful to print 2 PDF pages per physical
 page, for example.
 
+The script uses [Ghostscript][gs] to merge the documents
+and [pdfinfo][pdfinfo] to extract the number of pages
+in the input documents.
+
 ```
 $ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
 a.pdf
@@ -103,3 +107,6 @@ b - bravo
 [mpv]: http://mpv.io/
 [pip]: http://pip.readthedocs.org/en/latest/
 [dotfiles]: https://github.com/bamos/dotfiles
+
+[gs]: http://www.ghostscript.com/doc/current/Use.htm
+[pdfinfo]: http://linux.die.net/man/1/pdfinfo
