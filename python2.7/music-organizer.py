@@ -37,6 +37,8 @@ parser.add_argument('--artist',  action='store_true',
     help='''Operate in 'artist' mode and copy all songs to the
     root of the directory and cleanly format the names to
     be easily typed and navigated in a shell.''')
+parser.add_argument('--delete-unrecognized-extensions', action='store_true',
+    dest='delete_unrecognized')
 args = parser.parse_args()
 
 if args.collection and args.artist:
@@ -126,8 +128,9 @@ def artist(artistDir):
       elif ext == ".pdf":
         pass
       else:
-        print("Error: Unrecognized file extension in '" + filename + "'")
-        sys.exit(-42)
+        if not args.delete_unrecognized:
+          print("Error: Unrecognized file extension in '" + filename + "'")
+          sys.exit(-42)
 
     # Delete all subdirectories.
     for subdirname in dirnames:
