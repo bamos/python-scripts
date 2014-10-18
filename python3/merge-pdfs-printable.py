@@ -32,7 +32,6 @@ def create_blank_pdf(f_path):
 
 
 def get_pages_in_pdf(f_path):
-  print(f_path)
   with open(f_path,'rb') as f:
     fr = PdfFileReader(f)
     return fr.numPages
@@ -40,7 +39,6 @@ def get_pages_in_pdf(f_path):
 def merge_pdfs(f_names):
   merger = PdfFileMerger()
   fps = [open(f,'rb') for f in f_names]
-  print(fps)
   [merger.append(f) for f in fps]
   out_file = tempfile.mktemp("-merge.pdf")
   with open(out_file,'wb') as f:
