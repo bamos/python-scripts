@@ -9,8 +9,10 @@ import re
 import subprocess
 import tempfile
 
+from PyPDF2 import PdfFileMerger,PdfFileReader
+
 # Make sure executables are in PATH.
-executables_used = ['ps2pdf', 'gs', 'pdfinfo']
+executables_used = ['ps2pdf']
 def exe_exists(program):
   def is_exe(fpath): return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
   for path in os.environ["PATH"].split(os.pathsep):
@@ -30,25 +32,20 @@ def create_blank_pdf(f_path):
 
 
 def get_pages_in_pdf(f_path):
-  p = subprocess.Popen(['pdfinfo', f_path],stdout=subprocess.PIPE)
-  p_out = p.communicate()[0].decode()
-  if p.returncode != 0:
-    raise Exception("get_pages_in_pdf return code nonzero.")
-  m = re.search('Pages: *(\d*)', p_out)
-  if m: return int(m.group(1))
-  else: raise Exception(
-      "Error running 'pdfinfo' to get the number of pages in {}".format(
-        f_path
-      )
-    )
+  print(f_path)
+  with open(f_path,'rb') as f:
+    fr = PdfFileReader(f)
+    return fr.numPages
 
 def merge_pdfs(f_names):
+  merger = PdfFileMerger()
+  fps = [open(f,'rb') for f in f_names]
+  print(fps)
+  [merger.append(f) for f in fps]
   out_file = tempfile.mktemp("-merge.pdf")
-  p = subprocess.Popen(['gs', '-dBATCH', '-dNOPAUSE', '-q', '-sDEVICE=pdfwrite',
-    '-sOutputFile={}'.format(out_file)] + f_names)
-  p.communicate()
-  if p.returncode != 0:
-    raise Exception("merge_pdfs return code nonzero.")
+  with open(out_file,'wb') as f:
+    merger.write(f)
+  [f.close() for f in fps]
   print("Merged output is in '{}'.".format(out_file))
 
 if __name__=='__main__':
