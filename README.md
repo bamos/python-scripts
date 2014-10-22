@@ -73,6 +73,11 @@ c.pdf
 Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
 ```
 
+Note: Some of my decrypted PDF documents have resulted in
+`PyPDF2.utils.PdfReadError: file has not been decrypted`.
+My current workaround solution is to run `pdf2ps` on
+the PDF and then `ps2pdf` on the PS file.
+
 ## ScrapeCountries.py
 Scraping HTML tables with HTMLParser.
 Tests are located in `ScrapeCountriesTest.py`.
