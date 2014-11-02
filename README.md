@@ -41,6 +41,7 @@ $ EvalExpr.py '(((4+6)*10)<<2)'
 ## github-repo-summary.py
 Produces a Markdown table concisely summarizing a list of GitHub repositories.
 See the [blog post][repo-summary-post] for a more detailed overview.
+The following is an example from my [bamos/cv][cv] project.
 
 ```
 $ github-repo-summary.py \
@@ -181,3 +182,5 @@ b - bravo
 
 [gs]: http://www.ghostscript.com/doc/current/Use.htm
 [pypdf2]: https://github.com/mstamy2/PyPDF2
+
+[cv]: https://github.com/bamos/cv
