@@ -21,7 +21,7 @@ print(
 )
 print("Name | Stargazers | Description")
 print("|".join(["----"]*3))
-for r_name in sorted(args.repos):
+for r_name in sorted(args.repos, key=lambda v: v.upper()):
   try:
     r = github.get_repo(r_name)
   except:
