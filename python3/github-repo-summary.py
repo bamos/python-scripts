@@ -14,6 +14,10 @@ parser.add_argument('repos',nargs="+",type=str)
 args = parser.parse_args()
 github = Github(os.getenv("GITHUB_TOKEN"))
 
+def sanitize_for_md(s):
+  s = s.replace("*","\*")
+  return s
+
 print(
   "Generated on {}, see the Markdown source of this file for more details.\n".format(
     time.strftime("%Y-%m-%d")
@@ -30,6 +34,6 @@ for r_name in sorted(args.repos, key=lambda v: v.upper()):
   content = " | ".join([
     "[{}]({})".format(r.full_name,r.html_url),
     str(r.stargazers_count),
-    r.description
+    sanitize_for_md(r.description)
   ])
   print(content)
