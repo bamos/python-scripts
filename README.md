@@ -184,3 +184,34 @@ b - bravo
 [pypdf2]: https://github.com/mstamy2/PyPDF2
 
 [cv]: https://github.com/bamos/cv
+
+# Similar Projects
+There are many potpourri Python script repositories on GitHub.
+The following list shows a short sampling of projects,
+and I'm happy to merge pull requests of other projects.
+
+<!--
+To generate the following list, install https://github.com/jacquev6/PyGithub
+and download the `github-repo-summary.py` script from
+https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py.
+Please add projects to the list in the comment and in the table below.
+
+github-repo-summary.py \
+  gpambrozio/PythonScripts \
+  ClarkGoble/Scripts \
+  gpambrozio/PythonScripts \
+  realpython/python-scripts \
+  averagesecurityguy/Python-Examples \
+  computermacgyver/twitter-python
+-->
+
+Generated on 2014-11-06, see the Markdown source of this file for more details.
+
+Name | Stargazers | Description
+----|----|----
+[averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 13 | Example scripts for common python tasks
+[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 24 | My scripts - primarily using python and appscript
+[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 31 | Simple example scripts for Twitter data collection with Tweepy in Python
+[gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 40 | A bunch of Python scripts I made and that might interest somebody else
+[gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 40 | A bunch of Python scripts I made and that might interest somebody else
+[realpython/python-scripts](https://github.com/realpython/python-scripts) | 29 | because i'm tired of gists
