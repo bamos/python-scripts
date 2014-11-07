@@ -64,8 +64,8 @@ def toNeat(s):
   s = re.sub("^-*", "", s)
   s = re.sub("-*$", "", s)
 
-  # Ensure the string is only alphanumeric with dashes.
-  search = re.search("[^0-9a-z\-]", s)
+  # Ensure the string is only alphanumeric with '-' and '+'.
+  search = re.search("[^0-9a-z\-\+]", s)
   if search:
     print("Error: Unrecognized character in '" + s + "'")
     sys.exit(-42)
