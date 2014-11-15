@@ -18,8 +18,7 @@ def filter_func(tup):
       return False
     elif re.search('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',word):
       return False
-  else:
-    return True
+  return True
 
 def filtered_window(seq,n):
   return filter(filter_func, sliding_window(n,seq))
