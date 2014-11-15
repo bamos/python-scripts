@@ -6,6 +6,11 @@ import re
 from itertools import islice
 import operator
 
+url_re = re.compile(
+  'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+)
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--numWords',type=int,default=10)
 parser.add_argument('--maxTuples',type=int,default=4)
@@ -21,16 +26,19 @@ def window(seq, n):
     yield result
   for elem in it:
     result = result[1:] + (elem,)
-    containsShortWord = False
+    useThisWindow = True
     for i in result:
       if len(i) < args.minWordLength:
-        containsShortWord = True
+        useThisWindow = False
         break
-    if not containsShortWord:
+      elif url_re.search(i):
+        useThisWindow = False
+        break
+    if useThisWindow:
       yield result
 
 with open(args.file,'r') as f:
-  content = f.read().replace('\n',' ')
+  content = f.read().replace('\n',' ').lower()
   words = re.findall(r'\S+', content)
   for i in range(1,args.maxTuples+1):
     print("\n=== Sliding Window: {} ===".format(i))
