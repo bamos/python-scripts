@@ -170,6 +170,62 @@ u - uniform
 b - bravo
 ```
 
+## word-counter.py
+Count work frequencies within a file.
+
+```
+$ word-counter.py README.md
+
+=== Sliding Window: 1 ===
+  14: 'resume'
+  7: 'Python'
+  6: 'scripts'
+  6: 'Markdown'
+  5: 'detailed'
+  5: 'script'
+  5: 'using'
+  5: 'overview.'
+  5: 'blank'
+  5: 'pages'
+
+=== Sliding Window: 2 ===
+  5: 'detailed overview.'
+  3: 'Markdown source'
+  3: 'Description ----|----|----'
+  3: 'Python scripts'
+  3: 'blank pages.'
+  2: 'undergraduate Computer'
+  2: 'etc.) [icco/Resume](https://github.com/icco/Resume)'
+  2: 'Generates pretty'
+  2: 'column resume'
+  2: 'using XeTeX,'
+
+=== Sliding Window: 3 ===
+  2: 'asymmetric column resume'
+  2: 'build instructions. [deedydas/Deedy-Resume](https://github.com/deedydas/Deedy-Resume)'
+  2: 'HTML, LaTeX, markdown,'
+  2: 'resumé generator [prat0318/json_resume](https://github.com/prat0318/json_resume)'
+  2: 'Helvetica Neue, using'
+  2: 'multiple formats (such'
+  2: 'PDF/HTML resumé generator'
+  2: 'Neue, using XeTeX,'
+  2: '(TODO), etc.) [icco/Resume](https://github.com/icco/Resume)'
+  2: 'Computer Science student'
+
+=== Sliding Window: 4 ===
+  2: 'Computer Science student [divad12/resume](https://github.com/divad12/resume)'
+  2: 'Generates pretty HTML, LaTeX,'
+  2: 'Helvetica Neue, using XeTeX,'
+  2: 'PDF/HTML resumé generator [prat0318/json_resume](https://github.com/prat0318/json_resume)'
+  2: 'pretty HTML, LaTeX, markdown,'
+  2: 'asymmetric column resume template'
+  2: 'undergraduate Computer Science student'
+  1: 'Linux system configurations. ```Bash'
+  1: 'http://bamos.github.io/2014/07/05/music-organizer/ [repo-summary-post]: http://bamos.github.io/2014/11/02/github-repo-summary/ [mpv]:'
+  1: 'blank pages. Merged output'
+```
+
+
 [country-post]: http://bamos.github.io/2013/05/03/scraping-tables-python/
 [eval-post]: http://bamos.github.io/2013/08/07/python-expression-evaluator/
 [link-checker-post]: http://bamos.github.io/2014/02/06/link-checker-crontab/
