@@ -61,8 +61,8 @@ if __name__=='__main__':
     pages = get_pages_in_pdf(f_path)
     print(f_path)
     print(" + Pages: {}".format(pages))
-    if pages % args.modulo != 0:
+    if args.modulo != 0 and pages % args.modulo != 0:
       result_f_names = result_f_names + [blank_file]*(args.modulo-pages%args.modulo)
-    print(" + Added {} blank pages.".format(args.modulo-pages%args.modulo))
+      print(" + Added {} blank pages.".format(args.modulo-pages%args.modulo))
 
   merge_pdfs(result_f_names)
