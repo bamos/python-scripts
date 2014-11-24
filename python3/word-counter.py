@@ -22,7 +22,7 @@ def filter_func(tup):
 
 def filtered_window(seq,n):
   return filter(filter_func, sliding_window(n,seq))
-      
+
 with open(args.file,'r') as f:
   content = f.read().replace('\n',' ').lower()
   words = re.findall(r'\S+', content)
