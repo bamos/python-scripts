@@ -154,7 +154,7 @@ Using 5 columns overall and extracting columns (1, 2, 3, 4).
 Finished extracting. Data written to 'countries.tsv'
 
 $ head -n 1 countries.tsv
-Afghanistan	Afghanistan	Afghanestan	South-Central Asia
+Afghanistan	Afghanistan	Afghanistan	South-Central Asia
 ```
 
 ## phonetic.py
