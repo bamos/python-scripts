@@ -35,7 +35,7 @@ def getNumSuggestions(program,f_name):
   if program == "write-good":
     out = call(["write-good",f_name])
     return out.count("-------------")
-  elif program == "aspell":
+  elif program == "diction":
     out = call(["diction","--suggest",f_name])
     r = re.search("(\S*) phrases? in (\S*) sentences? found.",out)
     if r:
@@ -43,7 +43,7 @@ def getNumSuggestions(program,f_name):
         return 0
       else:
         return int(r.group(1))
-  elif program == "diction":
+  elif program == "aspell":
     out = call(["aspell","list"],in_f=f_name)
     return len(out.split())
   else:
