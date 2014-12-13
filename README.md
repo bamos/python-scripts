@@ -181,6 +181,12 @@ blog's Markdown posts and my project's Markdown README files.
 See the [blog post](http://bamos.github.io/2014/12/12/rank-writing/)
 for further details.
 
+The following programs should be on your `PATH`:
++ [aspell](http://aspell.net/)
++ [write-good](https://github.com/btford/write-good)
++ [diction](https://www.gnu.org/software/diction/)
+
+
 ```
 $ rank-writing.py *.md
 

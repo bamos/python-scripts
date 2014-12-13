@@ -3,6 +3,8 @@
 import argparse
 import re
 from subprocess import Popen,PIPE
+import shutil
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--aspell',action='store_true')
@@ -19,6 +21,11 @@ programs = []
 if args.aspell: programs.append("aspell")
 if args.diction: programs.append("diction")
 if args.write_good: programs.append("write-good")
+
+for program in programs:
+  if not shutil.which(program):
+    print("Error: '{}' not found on PATH. Please install.".format(program))
+    sys.exit(-1)
 
 def call(cmd,in_f=None):
   if in_f:
