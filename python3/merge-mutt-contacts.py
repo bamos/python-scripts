@@ -14,12 +14,10 @@ def merge_files(contacts_filenames):
             group = None
             for line in f.readlines():
                 line = line.strip()
-                if len(line) == 0:
-                    continue
                 r = re.search("^# (.*)$",line)
                 if r:
                     group = r.group(1)
-                else:
+                elif len(line) != 0:
                     contents[group].append(line)
     for group in sorted(contents):
         print("# {}".format(group))
