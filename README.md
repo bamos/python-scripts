@@ -27,6 +27,11 @@ The directory structure is `<artist>/<track>`, where `<artist>` and `<track>`
 are lower case strings separated by dashes.
 See the [blog post][music-organizer-post] for a more detailed overview.
 
+## mt.py
+Implements the simple [multitail](https://pypi.python.org/pypi/multitail)
+example to tail multiple files and append the filename to the beginning
+of the output.
+
 # Python 3
 ## EvalExpr.py
 A module to evaluate a mathematical expression using Python's AST.
@@ -168,6 +173,54 @@ t - tango
 h - hotel
 u - uniform
 b - bravo
+```
+
+## rank-writing.py
+`rank-writing.py` ranks the writing quality of my
+blog's Markdown posts and my project's Markdown README files.
+See the [blog post](http://bamos.github.io/2014/12/12/rank-writing/)
+for further details.
+
+The following programs should be on your `PATH`:
++ [aspell](http://aspell.net/)
++ [write-good](https://github.com/btford/write-good)
++ [diction](https://www.gnu.org/software/diction/)
+
+
+```
+$ rank-writing.py *.md
+
+=== 2013-05-03-scraping-tables-python.md ===
+Total: 53
+├── aspell: 34
+├── diction: 0
+└── write-good: 19
+
+=== 2014-09-08-nbd-android.md ===
+Total: 45
+├── aspell: 31
+├── diction: 0
+└── write-good: 14
+
+...
+
+=== 2013-03-11-mirroring-android.md ===
+Total: 1
+├── aspell: 1
+├── diction: 0
+└── write-good: 0
+
+=== 2014-10-26-analyzing-writing-in-latex.md ===
+Total: 0
+├── aspell: 0
+├── diction: 0
+└── write-good: 0
+
+=== 2013-04-16-pdf-from-plaintext.md ===
+Total: 0
+├── aspell: 0
+├── diction: 0
+└── write-good: 0
 ```
 
 ## word-counter.py

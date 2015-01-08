@@ -18,11 +18,7 @@ def sanitize_for_md(s):
   s = s.replace("*","\*")
   return s
 
-print(
-  "Generated on {}, see the Markdown source of this file for more details.\n".format(
-    time.strftime("%Y-%m-%d")
-  )
-)
+#print("Generated on {}.\n".format(time.strftime("%Y-%m-%d")))
 print("Name | Stargazers | Description")
 print("|".join(["----"]*3))
 for r_name in sorted(args.repos, key=lambda v: v.upper()):

@@ -3,6 +3,8 @@
 import argparse
 import re
 from subprocess import Popen,PIPE
+import shutil
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--aspell',action='store_true')
@@ -20,6 +22,11 @@ if args.aspell: programs.append("aspell")
 if args.diction: programs.append("diction")
 if args.write_good: programs.append("write-good")
 
+for program in programs:
+  if not shutil.which(program):
+    print("Error: '{}' not found on PATH. Please install.".format(program))
+    sys.exit(-1)
+
 def call(cmd,in_f=None):
   if in_f:
     with open(in_f,'r') as f:
@@ -35,7 +42,7 @@ def getNumSuggestions(program,f_name):
   if program == "write-good":
     out = call(["write-good",f_name])
     return out.count("-------------")
-  elif program == "aspell":
+  elif program == "diction":
     out = call(["diction","--suggest",f_name])
     r = re.search("(\S*) phrases? in (\S*) sentences? found.",out)
     if r:
@@ -43,7 +50,7 @@ def getNumSuggestions(program,f_name):
         return 0
       else:
         return int(r.group(1))
-  elif program == "diction":
+  elif program == "aspell":
     out = call(["aspell","list"],in_f=f_name)
     return len(out.split())
   else:
