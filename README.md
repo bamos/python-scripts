@@ -147,21 +147,6 @@ Note: Some of my decrypted PDF documents have resulted in
 My current workaround solution is to run `pdf2ps` on
 the PDF and then `ps2pdf` on the PS file.
 
-## ScrapeCountries.py
-Scraping HTML tables with HTMLParser.
-Tests are located in `ScrapeCountriesTest.py`.
-See the [blog post][country-post] for a more detailed overview.
-
-```
-$ ScrapeCountries.py 'http://www.nationsonline.org/oneworld/countries_of_the_world.htm' countries.tsv
-Parsing countries of the world.
-Using 5 columns overall and extracting columns (1, 2, 3, 4).
-Finished extracting. Data written to 'countries.tsv'
-
-$ head -n 1 countries.tsv
-Afghanistan	Afghanistan	Afghanistan	South-Central Asia
-```
-
 ## phonetic.py
 Obtain the NATO phonetic alphabet representation from short phrases.
 
