@@ -36,7 +36,6 @@ of the output.
 ## EvalExpr.py
 A module to evaluate a mathematical expression using Python's AST.
 Tests are located in `EvalExprTest.py`.
-See the [blog post][eval-post] for a more detailed overview.
 
 ```
 $ EvalExpr.py '(((4+6)*10)<<2)'
@@ -266,7 +265,6 @@ $ word-counter.py README.md
 
 
 [country-post]: http://bamos.github.io/2013/05/03/scraping-tables-python/
-[eval-post]: http://bamos.github.io/2013/08/07/python-expression-evaluator/
 [link-checker-post]: http://bamos.github.io/2014/02/06/link-checker-crontab/
 [music-organizer-post]: http://bamos.github.io/2014/07/05/music-organizer/
 [repo-summary-post]: http://bamos.github.io/2014/11/02/github-repo-summary/
