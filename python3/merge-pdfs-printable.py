@@ -39,8 +39,13 @@ def get_pages_in_pdf(f_path):
 def merge_pdfs(f_names):
   merger = PdfFileMerger()
   fps = [open(f,'rb') for f in f_names]
-  [merger.append(f) for f in fps]
-  out_file = tempfile.mktemp("-merge.pdf")
+  for f in fps:
+    try:
+      merger.append(f)
+    except:
+      print("Error merging {}".format(f))
+      raise
+  out_file = "merged.pdf" #tempfile.mktemp("-merge.pdf")
   with open(out_file,'wb') as f:
     merger.write(f)
   [f.close() for f in fps]
