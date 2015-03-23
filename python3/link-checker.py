@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 #
 # link-checker.py
 # Script to be run by crontab to report broken links.
