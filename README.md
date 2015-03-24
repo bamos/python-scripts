@@ -36,7 +36,6 @@ of the output.
 ## EvalExpr.py
 A module to evaluate a mathematical expression using Python's AST.
 Tests are located in `EvalExprTest.py`.
-See the [blog post][eval-post] for a more detailed overview.
 
 ```
 $ EvalExpr.py '(((4+6)*10)<<2)'
@@ -45,7 +44,6 @@ $ EvalExpr.py '(((4+6)*10)<<2)'
 
 ## github-repo-summary.py
 Produces a Markdown table concisely summarizing a list of GitHub repositories.
-See the [blog post][repo-summary-post] for a more detailed overview.
 The following is an example from my [bamos/cv][cv] project.
 
 ```
@@ -110,7 +108,6 @@ Name | Stargazers | Description
 ## link-checker.py
 Builds upon linkchecker to hide warnings and to send a concise email
 if bad links are found.
-See the [blog post][link-checker-post] for a more detailed overview.
 
 ![Link checker screenshot](https://raw.githubusercontent.com/bamos/python-scripts/master/link-checker-screenshot.png?raw=true)
 
@@ -163,8 +160,6 @@ b - bravo
 ## rank-writing.py
 `rank-writing.py` ranks the writing quality of my
 blog's Markdown posts and my project's Markdown README files.
-See the [blog post](http://bamos.github.io/2014/12/12/rank-writing/)
-for further details.
 
 The following programs should be on your `PATH`:
 + [aspell](http://aspell.net/)
@@ -266,10 +261,7 @@ $ word-counter.py README.md
 
 
 [country-post]: http://bamos.github.io/2013/05/03/scraping-tables-python/
-[eval-post]: http://bamos.github.io/2013/08/07/python-expression-evaluator/
-[link-checker-post]: http://bamos.github.io/2014/02/06/link-checker-crontab/
 [music-organizer-post]: http://bamos.github.io/2014/07/05/music-organizer/
-[repo-summary-post]: http://bamos.github.io/2014/11/02/github-repo-summary/
 
 [mpv]: http://mpv.io/
 [pip]: http://pip.readthedocs.org/en/latest/

@@ -1,7 +1,36 @@
 #!/usr/bin/env python3
-#
-# Brandon Amos <http://bamos.github.io>
 # 2014.10.17
+
+"""The printers in my office print a cover page before every job, and
+I don't like printing many cover pages if I want to submit multiple
+papers separately so that the papers don't overlap. This script will
+merge PDF documents and insert blank pages so that the printed pages
+won't overlap documents. The modulo option is helpful to print 2 PDF
+pages per physical page side.
+
+The script uses PyPDF2 to merge the documents and to extract the
+number of pages in the input documents and ghostscript to create a
+blank PDF page.
+
+    $ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
+    a.pdf
+     + Pages: 6
+     + Added 2 blank pages.
+    b.pdf
+     + Pages: 13
+     + Added 3 blank pages.
+    c.pdf
+     + Pages: 13
+     + Added 3 blank pages.
+    Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
+
+Note: Some of my decrypted PDF documents have resulted in
+PyPDF2.utils.PdfReadError: file has not been decrypted. My current
+workaround solution is to run pdf2ps on the PDF and then ps2pdf on the
+PS file.
+"""
+
+__author__ = ['Brandon Amos <http://bamos.github.io>']
 
 import argparse
 import os
@@ -39,8 +68,13 @@ def get_pages_in_pdf(f_path):
 def merge_pdfs(f_names):
   merger = PdfFileMerger()
   fps = [open(f,'rb') for f in f_names]
-  [merger.append(f) for f in fps]
-  out_file = tempfile.mktemp("-merge.pdf")
+  for f in fps:
+    try:
+      merger.append(f)
+    except:
+      print("Error merging {}".format(f))
+      raise
+  out_file = "merged.pdf" #tempfile.mktemp("-merge.pdf")
   with open(out_file,'wb') as f:
     merger.write(f)
   [f.close() for f in fps]
