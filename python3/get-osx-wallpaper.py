@@ -28,6 +28,8 @@
 #
 # This can be paired with other commands such as `open` or `rm`.
 # Run `killall Dock` to refresh the changes after removing the file.
+# Note that the dock will be restarted and all windows will be
+# unminimized.
 #
 #   $ open $(get-osx-wallpaper.py)
 #   $ rm $(get-osx-wallpaper.py) && killall Dock
