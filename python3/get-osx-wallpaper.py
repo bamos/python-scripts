@@ -10,7 +10,7 @@
 # Brandon Amos <http://github.com/bamos>
 #
 # --- Warning ---
-# + This approach doesn't work multiple monitors.
+# + This approach doesn't work with multiple monitors.
 #
 # --- Tested On ---
 # + OSX Yosemite 10.10.2 with a single monitor on a MBP.
