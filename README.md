@@ -160,8 +160,10 @@ Ensure `db_path` and `wallpaper_dir` are correctly set below.
 Assuming `get-osx-wallpaper.py` is on your path,
 check the output with the following
 
-  $ get-osx-wallpaper.py
-  /Users/bamos/Pictures/wallpaper/nature/496.jpg
+```
+$ get-osx-wallpaper.py
+/Users/bamos/Pictures/wallpaper/nature/496.jpg
+```
 
 Please ensure this is correct before trying to remove it!
 
@@ -170,14 +172,18 @@ Run `killall Dock` to refresh the changes after removing the file.
 Note that the dock will be restarted and all windows will be
 unminimized.
 
-  $ open $(get-osx-wallpaper.py)
-  $ rm $(get-osx-wallpaper.py) && killall Dock
+```
+$ open $(get-osx-wallpaper.py)
+$ rm $(get-osx-wallpaper.py) && killall Dock
+```
 
 Example alias definitions for bash and zsh are available in
 https://github.com/bamos/dotfiles/blob/master/.aliases:
 
-   alias open-wallpaper='open $(get-osx-wallpaper.py)'
-   alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
+```
+alias open-wallpaper='open $(get-osx-wallpaper.py)'
+alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
+```
 
 
 
