@@ -27,7 +27,7 @@ pathadd <python-scripts>/python3
 
 ## generate-readme.py
 + Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2015.03.27
++ Created: 2015.03.27
 
 
 Generates the README for
@@ -37,8 +37,8 @@ Script descriptions are obtained by parsing the docstrings.
 
 
 ## python2.7/music-organizer.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.04.19
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.04.19
 
 
 This script (music-organizer.py) organizes my music collection for
@@ -49,8 +49,8 @@ are lower case strings separated by dashes.
 
 
 ## python2.7/mt.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.11.30
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.11.30
 
 
 This script implements the simple
@@ -61,8 +61,8 @@ of the output.
 
 
 ## python3/github-repo-summary.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.11.02
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.11.02
 
 
 Produces a Markdown table concisely summarizing a list of GitHub repositories.
@@ -70,8 +70,8 @@ Produces a Markdown table concisely summarizing a list of GitHub repositories.
 
 
 ## python3/link-checker.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.02.06
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.02.06
 
 
 Script to be run by crontab to report broken links.
@@ -84,8 +84,8 @@ to hide warnings and to send a concise email if bad links are found.
 
 
 ## python3/phonetic.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.02.14
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.02.14
 
 
 Obtain the NATO phonetic alphabet representation from short phrases.
@@ -103,8 +103,8 @@ b - bravo
 
 
 ## python3/rank-writing.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.02.14
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.02.14
 
 
 `rank-writing.py` ranks the writing quality of my
@@ -137,8 +137,8 @@ Total: 0
 
 
 ## python3/get-osx-wallpaper.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2015.03.25
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2015.03.25
 
 
 This is a Python script that outputs the path of the current
@@ -148,13 +148,13 @@ across a large collection of pictures and you want to
 delete the current wallpaper.
 
 
---- Warning ---
+### Warning
 + This approach doesn't work with multiple monitors.
 
---- Tested On ---
+### Tested On
 + OSX Yosemite 10.10.2 with a single monitor on a MBP.
 
---- Usage ---
+### Usage
 Ensure `db_path` and `wallpaper_dir` are correctly set below.
 
 Assuming `get-osx-wallpaper.py` is on your path,
@@ -182,8 +182,8 @@ https://github.com/bamos/dotfiles/blob/master/.aliases:
 
 
 ## python3/merge-pdfs-printable.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.10.17
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.10.17
 
 
 The printers in my office print a cover page before every job, and
@@ -217,8 +217,8 @@ PS file.
 
 
 ## python3/word-counter.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.11.7
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.11.7
 
 
 Count work frequencies within a file.
@@ -243,18 +243,19 @@ $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
   34: 'shakespeare dramatis personae'
   18: 'comes here? enter'
   14: 'duke's palace enter'
+```
 
 
 
 ## python3/eval-expr.py
-+ Authors: J. Sebastian, Brandon Amos <http://github.com/bamos>
-+ Date Created: 2013.08.01
++ Authors: J. Sebastian, [Brandon Amos](https://github.com/bamos)
++ Created: 2013.08.01
 
 
 A module to evaluate a mathematical expression using Python's AST.
 
 + Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
-+ Modifications by: Brandon Amos <http://bamos.github.io>.
++ Modifications by: [Brandon Amos](https://github.com/bamos).
 
 If you want a command-line expression evaluator, use
 [Russell91/pythonpy](https://github.com/Russell91/pythonpy).
@@ -268,8 +269,8 @@ $ eval-expr.py '(((4+6)*10)<<2)'
 
 
 ## python3/merge-mutt-contacts.py
-+ Authors: Brandon Amos <http://github.com/bamos>
-+ Date Created: 2014.01.08
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.01.08
 
 
 Merges two mutt contact files.
