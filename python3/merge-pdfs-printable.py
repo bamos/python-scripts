@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-# 2014.10.17
 
-"""The printers in my office print a cover page before every job, and
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.10.17'
+
+"""
+The printers in my office print a cover page before every job, and
 I don't like printing many cover pages if I want to submit multiple
 papers separately so that the papers don't overlap. This script will
 merge PDF documents and insert blank pages so that the printed pages
@@ -29,8 +32,6 @@ PyPDF2.utils.PdfReadError: file has not been decrypted. My current
 workaround solution is to run pdf2ps on the PDF and then ps2pdf on the
 PS file.
 """
-
-__author__ = ['Brandon Amos <http://bamos.github.io>']
 
 import argparse
 import os

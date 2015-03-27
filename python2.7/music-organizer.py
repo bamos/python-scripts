@@ -1,8 +1,14 @@
 #!/usr/bin/env python2.7
-#
-# music-organizer.py
-# Brandon Amos <http://bamos.io/>
-# 2014.4.19
+
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.04.19'
+
+"""
+This script (music-organizer.py) organizes my music collection for
+iTunes and [mpv](http://mpv.io) using tag information.
+The directory structure is `<artist>/<track>`, where `<artist>` and `<track>`
+are lower case strings separated by dashes.
+"""
 
 import argparse
 import os
@@ -135,7 +141,6 @@ def artist(artistDir):
               sys.exit(-42)
           else:
             os.rename(fullPath, newFullPath)
-        os.chmod(newFullPath, 0644)
       elif ext == ".pdf":
         pass
       else:
@@ -173,7 +178,6 @@ def song(filename):
     os.mkdir(neatArtist)
   newFullPath = os.path.join(neatArtist,neatTitle+ext)
   os.rename(filename, newFullPath)
-  os.chmod(newFullPath, 0644)
 
 def collection():
   for f in os.listdir("."):

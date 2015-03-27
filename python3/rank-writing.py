@@ -1,5 +1,37 @@
 #!/usr/bin/env python3
 
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.02.14'
+
+"""
+`rank-writing.py` ranks the writing quality of my
+blog's Markdown posts and my project's Markdown README files.
+
+The following programs should be on your `PATH`:
++ [aspell](http://aspell.net/)
++ [write-good](https://github.com/btford/write-good)
++ [diction](https://www.gnu.org/software/diction/)
+
+
+```
+$ rank-writing.py *.md
+
+=== 2013-05-03-scraping-tables-python.md ===
+Total: 53
+├── aspell: 34
+├── diction: 0
+└── write-good: 19
+
+...
+
+=== 2013-04-16-pdf-from-plaintext.md ===
+Total: 0
+├── aspell: 0
+├── diction: 0
+└── write-good: 0
+```
+"""
+
 import argparse
 import re
 from subprocess import Popen,PIPE

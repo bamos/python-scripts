@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-#
-# Brandon Amos <http://bamos.io>
-# 2014.11.02
+
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.11.02'
+
+"""
+Produces a Markdown table concisely summarizing a list of GitHub repositories.
+"""
 
 from github import Github
 import argparse

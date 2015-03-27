@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-#
-# link-checker.py
-# Script to be run by crontab to report broken links.
-#
-# Builds upon linkchecker (Ubuntu: sudo apt-get install linkchecker)
-# to hide warnings and to send a concise email if bad links are found.
-#
-# Brandon Amos <http://bamos.io>
-# 2014.02.06
+
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.02.06'
+
+"""
+Script to be run by crontab to report broken links.
+
+Builds upon linkchecker (Ubuntu: sudo apt-get install linkchecker)
+to hide warnings and to send a concise email if bad links are found.
+
+![Link checker screenshot](https://raw.githubusercontent.com/bamos/python-scripts/master/link-checker-screenshot.png?raw=true)
+"""
 
 from subprocess import Popen,PIPE
 

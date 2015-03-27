@@ -1,10 +1,21 @@
 #!/usr/bin/env python3
-#
-# phonetic.py
-# Obtain the NATO phonetic alphabet representation from short phrases.
-#
-# Brandon Amos <http://bamos.io>
-# 2014.02.14
+
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.02.14'
+
+"""
+Obtain the NATO phonetic alphabet representation from short phrases.
+
+```
+$ phonetic.py github
+g - golf
+i - india
+t - tango
+h - hotel
+u - uniform
+b - bravo
+```
+"""
 
 import sys
 

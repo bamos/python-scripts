@@ -1,5 +1,15 @@
 #!/usr/bin/env python2
 
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.11.30'
+
+"""
+This script implements the simple
+[multitail](https://pypi.python.org/pypi/multitail)
+example to tail multiple files and append the filename to the beginning
+of the output.
+"""
+
 import argparse
 import multitail
 import sys

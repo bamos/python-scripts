@@ -1,9 +1,23 @@
 #!/usr/bin/env python3
-# EvalExpr.py
-# A module to evaluate a mathematical expression using Python's AST.
-#
-# Original by: J. Sebastian at `http://stackoverflow.com/questions/2371436`
-# Modifications by: Brandon Amos <http://bamos.github.io>
+
+__author__ = ['J. Sebastian', 'Brandon Amos <http://github.com/bamos>']
+__date__ = '2013.08.01'
+
+"""
+A module to evaluate a mathematical expression using Python's AST.
+
++ Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
++ Modifications by: Brandon Amos <http://bamos.github.io>.
+
+If you want a command-line expression evaluator, use
+[Russell91/pythonpy](https://github.com/Russell91/pythonpy).
+
+
+```
+$ eval-expr.py '(((4+6)*10)<<2)'
+(((4+6)*10)<<2) = 400
+```
+"""
 
 import ast
 import operator as op

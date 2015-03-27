@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-#
-# Brandon Amos <http://bamos.github.io>
-# 2015.01.08
+
+__author__ = ['Brandon Amos <http://github.com/bamos>']
+__date__ = '2014.01.08'
+
+"""
+Merges two mutt contact files.
+"""
 
 import argparse
 from collections import defaultdict
