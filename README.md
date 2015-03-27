@@ -23,7 +23,7 @@ pathadd <python-scripts>/python3
 [pip]: http://pip.readthedocs.org/en/latest/
 [dotfiles]: https://github.com/bamos/dotfiles
 
-# Script Descriptions
+# Scripts
 
 ## [generate-readme.py](https://github.com/bamos/python-scripts/blob/master/generate-readme.py)
 + Authors: Brandon Amos <http://github.com/bamos>
