@@ -62,12 +62,12 @@ def get_docstr(filename):
             print("    + Error reading (author,date,desc).")
             raise
         return """
-## {}
+## [{}](https://github.com/bamos/python-scripts/blob/master/{})
 + Authors: {}
 + Created: {}
 
 {}
-""".format(filename, ", ".join(authors), date, desc)
+""".format(filename, filename, ", ".join(authors), date, desc)
 
 def get_descriptions():
     print("# Getting project descriptions")

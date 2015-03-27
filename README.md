@@ -25,7 +25,7 @@ pathadd <python-scripts>/python3
 
 # Script Descriptions
 
-## generate-readme.py
+## [generate-readme.py](https://github.com/bamos/python-scripts/blob/master/generate-readme.py)
 + Authors: Brandon Amos <http://github.com/bamos>
 + Created: 2015.03.27
 
@@ -36,7 +36,7 @@ Script descriptions are obtained by parsing the docstrings.
 
 
 
-## python2.7/music-organizer.py
+## [python2.7/music-organizer.py](https://github.com/bamos/python-scripts/blob/master/python2.7/music-organizer.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.04.19
 
@@ -48,7 +48,7 @@ are lower case strings separated by dashes.
 
 
 
-## python2.7/mt.py
+## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.11.30
 
@@ -60,7 +60,7 @@ of the output.
 
 
 
-## python3/github-repo-summary.py
+## [python3/github-repo-summary.py](https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.11.02
 
@@ -69,7 +69,7 @@ Produces a Markdown table concisely summarizing a list of GitHub repositories.
 
 
 
-## python3/link-checker.py
+## [python3/link-checker.py](https://github.com/bamos/python-scripts/blob/master/python3/link-checker.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.02.06
 
@@ -83,7 +83,7 @@ to hide warnings and to send a concise email if bad links are found.
 
 
 
-## python3/phonetic.py
+## [python3/phonetic.py](https://github.com/bamos/python-scripts/blob/master/python3/phonetic.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.02.14
 
@@ -102,7 +102,7 @@ b - bravo
 
 
 
-## python3/rank-writing.py
+## [python3/rank-writing.py](https://github.com/bamos/python-scripts/blob/master/python3/rank-writing.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.02.14
 
@@ -136,7 +136,7 @@ Total: 0
 
 
 
-## python3/get-osx-wallpaper.py
+## [python3/get-osx-wallpaper.py](https://github.com/bamos/python-scripts/blob/master/python3/get-osx-wallpaper.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2015.03.25
 
@@ -181,7 +181,7 @@ https://github.com/bamos/dotfiles/blob/master/.aliases:
 
 
 
-## python3/merge-pdfs-printable.py
+## [python3/merge-pdfs-printable.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-pdfs-printable.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.10.17
 
@@ -216,7 +216,7 @@ PS file.
 
 
 
-## python3/word-counter.py
+## [python3/word-counter.py](https://github.com/bamos/python-scripts/blob/master/python3/word-counter.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.11.7
 
@@ -247,7 +247,7 @@ $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
 
 
 
-## python3/eval-expr.py
+## [python3/eval-expr.py](https://github.com/bamos/python-scripts/blob/master/python3/eval-expr.py)
 + Authors: J. Sebastian, [Brandon Amos](https://github.com/bamos)
 + Created: 2013.08.01
 
@@ -268,7 +268,7 @@ $ eval-expr.py '(((4+6)*10)<<2)'
 
 
 
-## python3/merge-mutt-contacts.py
+## [python3/merge-mutt-contacts.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-mutt-contacts.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.01.08
 
