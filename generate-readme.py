@@ -40,7 +40,7 @@ pathadd <python-scripts>/python3
 [pip]: http://pip.readthedocs.org/en/latest/
 [dotfiles]: https://github.com/bamos/dotfiles
 
-# Script Descriptions
+# Scripts
 {{descriptions}}
 
 # Similar Projects
