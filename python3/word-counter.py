@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-__author__ = ['Brandon Amos <http://github.com/bamos>']
+__author__ = ['[Brandon Amos](https://github.com/bamos)']
 __date__ = '2014.11.7'
 
 """
@@ -26,6 +26,7 @@ $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
   34: 'shakespeare dramatis personae'
   18: 'comes here? enter'
   14: 'duke's palace enter'
+```
 """
 
 from collections import Counter

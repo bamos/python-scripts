@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-__author__ = ['Brandon Amos <http://github.com/bamos>']
+__author__ = ['[Brandon Amos](https://github.com/bamos)']
 __date__ = '2015.03.25'
 
 """
@@ -11,13 +11,13 @@ across a large collection of pictures and you want to
 delete the current wallpaper.
 
 
---- Warning ---
+### Warning
 + This approach doesn't work with multiple monitors.
 
---- Tested On ---
+### Tested On
 + OSX Yosemite 10.10.2 with a single monitor on a MBP.
 
---- Usage ---
+### Usage
 Ensure `db_path` and `wallpaper_dir` are correctly set below.
 
 Assuming `get-osx-wallpaper.py` is on your path,

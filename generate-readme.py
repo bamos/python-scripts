@@ -64,7 +64,7 @@ def get_docstr(filename):
         return """
 ## {}
 + Authors: {}
-+ Date Created: {}
++ Created: {}
 
 {}
 """.format(filename, ", ".join(authors), date, desc)
