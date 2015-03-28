@@ -2,15 +2,17 @@
 [![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
 [![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
 
-This is a collection of short Python scripts I have added to my
-`PATH` variable to run from anywhere.
+This is a collection of short Python scripts use in Linux.
+I have these added to my `PATH`
+[variable](https://wiki.archlinux.org/index.php/Environment_variables)
+to run from anywhere.
 None are currently available in [pip][pip],
 but I will add them if enough people are interested.
 
 To add these to your `PATH`, clone the repo and add the following
 to your `bashrc` or `zshrc`, replacing `<python-scripts>`
 with the location of the cloned repository.
-Furthermore, see my [dotfiles][dotfiles] repo for my
+See my [dotfiles][dotfiles] repo for my
 complete Mac and Linux system configurations.
 
 ```Bash
@@ -36,13 +38,25 @@ using `pip` with `pip3 install -r requirements-3.txt`.
 # Scripts
 
 ## [generate-readme.py](https://github.com/bamos/python-scripts/blob/master/generate-readme.py)
-+ Authors: Brandon Amos <http://github.com/bamos>
++ Authors: [Brandon Amos](http://github.com/bamos)
 + Created: 2015.03.27
 
 
 Generates the README for
 [bamos/python-scripts](https://github.com/bamos/python-scripts).
 Script descriptions are obtained by parsing the docstrings.
+
+
+
+## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.11.30
+
+
+This script implements the simple
+[multitail](https://pypi.python.org/pypi/multitail)
+example to tail multiple files and append the filename to the beginning
+of the output.
 
 
 
@@ -58,15 +72,75 @@ are lower case strings separated by dashes.
 
 
 
-## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
+## [python3/eval-expr.py](https://github.com/bamos/python-scripts/blob/master/python3/eval-expr.py)
++ Authors: J. Sebastian, [Brandon Amos](https://github.com/bamos)
++ Created: 2013.08.01
+
+
+A module to evaluate a mathematical expression using Python's AST.
+
++ Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
++ Modifications by: [Brandon Amos](https://github.com/bamos).
+
+If you want a command-line expression evaluator, use
+[Russell91/pythonpy](https://github.com/Russell91/pythonpy).
+
+
+```
+$ eval-expr.py '(((4+6)*10)<<2)'
+(((4+6)*10)<<2) = 400
+```
+
+
+
+## [python3/get-osx-wallpaper.py](https://github.com/bamos/python-scripts/blob/master/python3/get-osx-wallpaper.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
-+ Created: 2014.11.30
++ Created: 2015.03.25
 
 
-This script implements the simple
-[multitail](https://pypi.python.org/pypi/multitail)
-example to tail multiple files and append the filename to the beginning
-of the output.
+This is a Python script that outputs the path of the current
+OSX wallpaper.
+This is helpful when the desktop wallpaper is randomized
+across a large collection of pictures and you want to
+delete the current wallpaper.
+
+
+### Warning
++ This approach doesn't work with multiple monitors.
+
+### Tested On
++ OSX Yosemite 10.10.2 with a single monitor on a MBP.
+
+### Usage
+Ensure `db_path` and `wallpaper_dir` are correctly set below.
+
+Assuming `get-osx-wallpaper.py` is on your path,
+check the output with the following
+
+```
+$ get-osx-wallpaper.py
+/Users/bamos/Pictures/wallpaper/nature/496.jpg
+```
+
+Please ensure this is correct before trying to remove it!
+
+This can be paired with other commands such as `open` or `rm`.
+Run `killall Dock` to refresh the changes after removing the file.
+Note that the dock will be restarted and all windows will be
+unminimized.
+
+```
+$ open $(get-osx-wallpaper.py)
+$ rm $(get-osx-wallpaper.py) && killall Dock
+```
+
+Example alias definitions for bash and zsh are available in
+https://github.com/bamos/dotfiles/blob/master/.aliases:
+
+```
+alias open-wallpaper='open $(get-osx-wallpaper.py)'
+alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
+```
 
 
 
@@ -90,6 +164,52 @@ Builds upon linkchecker (Ubuntu: sudo apt-get install linkchecker)
 to hide warnings and to send a concise email if bad links are found.
 
 ![Link checker screenshot](https://raw.githubusercontent.com/bamos/python-scripts/master/link-checker-screenshot.png?raw=true)
+
+
+
+## [python3/merge-mutt-contacts.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-mutt-contacts.py)
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.01.08
+
+
+Merges two mutt contact files.
+
+
+
+## [python3/merge-pdfs-printable.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-pdfs-printable.py)
++ Authors: [Brandon Amos](https://github.com/bamos)
++ Created: 2014.10.17
+
+
+The printers in my office print a cover page before every job, and
+I don't like printing many cover pages if I want to submit multiple
+papers separately so that the papers don't overlap. This script will
+merge PDF documents and insert blank pages so that the printed pages
+won't overlap documents. The modulo option is helpful to print 2 PDF
+pages per physical page side.
+
+The script uses PyPDF2 to merge the documents and to extract the
+number of pages in the input documents and ghostscript to create a
+blank PDF page.
+
+```
+$ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
+a.pdf
+  + Pages: 6
+  + Added 2 blank pages.
+b.pdf
+  + Pages: 13
+  + Added 3 blank pages.
+c.pdf
+  + Pages: 13
+  + Added 3 blank pages.
+Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
+```
+
+Note: Some of my decrypted PDF documents have resulted in
+PyPDF2.utils.PdfReadError: file has not been decrypted. My current
+workaround solution is to run pdf2ps on the PDF and then ps2pdf on the
+PS file.
 
 
 
@@ -146,94 +266,6 @@ Total: 0
 
 
 
-## [python3/get-osx-wallpaper.py](https://github.com/bamos/python-scripts/blob/master/python3/get-osx-wallpaper.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
-+ Created: 2015.03.25
-
-
-This is a Python script that outputs the path of the current
-OSX wallpaper.
-This is helpful when the desktop wallpaper is randomized
-across a large collection of pictures and you want to
-delete the current wallpaper.
-
-
-### Warning
-+ This approach doesn't work with multiple monitors.
-
-### Tested On
-+ OSX Yosemite 10.10.2 with a single monitor on a MBP.
-
-### Usage
-Ensure `db_path` and `wallpaper_dir` are correctly set below.
-
-Assuming `get-osx-wallpaper.py` is on your path,
-check the output with the following
-
-```
-$ get-osx-wallpaper.py
-/Users/bamos/Pictures/wallpaper/nature/496.jpg
-```
-
-Please ensure this is correct before trying to remove it!
-
-This can be paired with other commands such as `open` or `rm`.
-Run `killall Dock` to refresh the changes after removing the file.
-Note that the dock will be restarted and all windows will be
-unminimized.
-
-```
-$ open $(get-osx-wallpaper.py)
-$ rm $(get-osx-wallpaper.py) && killall Dock
-```
-
-Example alias definitions for bash and zsh are available in
-https://github.com/bamos/dotfiles/blob/master/.aliases:
-
-```
-alias open-wallpaper='open $(get-osx-wallpaper.py)'
-alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
-```
-
-
-
-## [python3/merge-pdfs-printable.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-pdfs-printable.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
-+ Created: 2014.10.17
-
-
-The printers in my office print a cover page before every job, and
-I don't like printing many cover pages if I want to submit multiple
-papers separately so that the papers don't overlap. This script will
-merge PDF documents and insert blank pages so that the printed pages
-won't overlap documents. The modulo option is helpful to print 2 PDF
-pages per physical page side.
-
-The script uses PyPDF2 to merge the documents and to extract the
-number of pages in the input documents and ghostscript to create a
-blank PDF page.
-
-```
-$ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
-a.pdf
-  + Pages: 6
-  + Added 2 blank pages.
-b.pdf
-  + Pages: 13
-  + Added 3 blank pages.
-c.pdf
-  + Pages: 13
-  + Added 3 blank pages.
-Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
-```
-
-Note: Some of my decrypted PDF documents have resulted in
-PyPDF2.utils.PdfReadError: file has not been decrypted. My current
-workaround solution is to run pdf2ps on the PDF and then ps2pdf on the
-PS file.
-
-
-
 ## [python3/word-counter.py](https://github.com/bamos/python-scripts/blob/master/python3/word-counter.py)
 + Authors: [Brandon Amos](https://github.com/bamos)
 + Created: 2014.11.7
@@ -262,36 +294,6 @@ $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
     18: 'comes here? enter'
     14: 'duke's palace enter'
 ```
-
-
-
-## [python3/eval-expr.py](https://github.com/bamos/python-scripts/blob/master/python3/eval-expr.py)
-+ Authors: J. Sebastian, [Brandon Amos](https://github.com/bamos)
-+ Created: 2013.08.01
-
-
-A module to evaluate a mathematical expression using Python's AST.
-
-+ Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
-+ Modifications by: [Brandon Amos](https://github.com/bamos).
-
-If you want a command-line expression evaluator, use
-[Russell91/pythonpy](https://github.com/Russell91/pythonpy).
-
-
-```
-$ eval-expr.py '(((4+6)*10)<<2)'
-(((4+6)*10)<<2) = 400
-```
-
-
-
-## [python3/merge-mutt-contacts.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-mutt-contacts.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
-+ Created: 2014.01.08
-
-
-Merges two mutt contact files.
 
 
 
