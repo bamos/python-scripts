@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-__author__ = ['Brandon Amos <http://github.com/bamos>']
+__author__ = ['[Brandon Amos](http://github.com/bamos)']
 __date__ = '2015.03.27'
 
 """
@@ -19,15 +19,17 @@ readme = Template("""
 [![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
 [![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
 
-This is a collection of short Python scripts I have added to my
-`PATH` variable to run from anywhere.
+This is a collection of short Python scripts use in Linux.
+I have these added to my `PATH`
+[variable](https://wiki.archlinux.org/index.php/Environment_variables)
+to run from anywhere.
 None are currently available in [pip][pip],
 but I will add them if enough people are interested.
 
 To add these to your `PATH`, clone the repo and add the following
 to your `bashrc` or `zshrc`, replacing `<python-scripts>`
 with the location of the cloned repository.
-Furthermore, see my [dotfiles][dotfiles] repo for my
+See my [dotfiles][dotfiles] repo for my
 complete Mac and Linux system configurations.
 
 ```Bash
