@@ -43,8 +43,8 @@ and
 [.travis-script-3.sh](https://github.com/bamos/python-scripts/blob/master/.travis-script-3.sh)
 to ensure `requirements.txt` has all of the Python 2 and Python 3 scripts
 and that there are no careless errors.
-[pep8](https://github.com/jcrocholl/pep8) is also executed and
-will cause the build to fail if a change does not meet pep8 conventions.
+[pep8](https://github.com/jcrocholl/pep8) will fail the build
+pep8 styling conventions aren't met.
 
 # Scripts
 
