@@ -23,14 +23,15 @@ This is a collection of short Python scripts use in Linux.
 I have these added to my `PATH`
 [variable](https://wiki.archlinux.org/index.php/Environment_variables)
 to run from anywhere.
-None are currently available in [pip][pip],
-but I will add them if enough people are interested.
+The script contents in this README have been
+[automatically generated](https://github.com/bamos/python-scripts#generate-readmepy).
 
-To add these to your `PATH`, clone the repo and add the following
+# Adding to your PATH
+Clone the repo and add the following
 to your `bashrc` or `zshrc`, replacing `<python-scripts>`
 with the location of the cloned repository.
-See my [dotfiles][dotfiles] repo for my
-complete Mac and Linux system configurations.
+See my [dotfiles](https://github.com/bamos/dotfiles)
+repo for my complete Mac and Linux system configurations.
 
 ```Bash
 # Add additional directories to the path.
@@ -42,15 +43,25 @@ pathadd <python-scripts>/python2.7
 pathadd <python-scripts>/python3
 ```
 
-[pip]: http://pip.readthedocs.org/en/latest/
-[dotfiles]: https://github.com/bamos/dotfiles
-
 # Dependencies
 These scripts are written in Python 3 except when external
 libraries don't support Python 3.
 Dependencies for Python 2 and 3 for all scripts are
 included in `requirements-{2,3}.txt` and can be installed
 using `pip` with `pip3 install -r requirements-3.txt`.
+
+# Travis CI
+Continuous integration is provided by Travis CI
+[here](https://travis-ci.org/bamos/python-scripts).
+[.travis.yml](https://github.com/bamos/python-scripts/blob/master/.travis.yml)
+calls
+[.travis-script-2.sh](https://github.com/bamos/python-scripts/blob/master/.travis-script-2.sh)
+and
+[.travis-script-3.sh](https://github.com/bamos/python-scripts/blob/master/.travis-script-3.sh)
+to ensure `requirements.txt` has all of the Python 2 and Python 3 scripts
+and that there are no careless errors.
+[pep8](https://github.com/jcrocholl/pep8) is also executed and
+will cause the build to fail if a change does not meet pep8 conventions.
 
 # Scripts
 {{descriptions}}
