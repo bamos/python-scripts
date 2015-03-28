@@ -1,4 +1,7 @@
 
+[![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
+[![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
+
 This is a collection of short Python scripts I have added to my
 `PATH` variable to run from anywhere.
 None are currently available in [pip][pip],
@@ -22,6 +25,13 @@ pathadd <python-scripts>/python3
 
 [pip]: http://pip.readthedocs.org/en/latest/
 [dotfiles]: https://github.com/bamos/dotfiles
+
+# Dependencies
+These scripts are written in Python 3 except when external
+libraries don't support Python 3.
+Dependencies for Python 2 and 3 for all scripts are
+included in `requirements-{2,3}.txt` and can be installed
+using `pip` with `pip3 install -r requirements-3.txt`.
 
 # Scripts
 
