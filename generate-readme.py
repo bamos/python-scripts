@@ -16,6 +16,9 @@ from jinja2 import Template
 from subprocess import Popen,PIPE
 
 readme = Template("""
+[![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
+[![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
+
 This is a collection of short Python scripts I have added to my
 `PATH` variable to run from anywhere.
 None are currently available in [pip][pip],
