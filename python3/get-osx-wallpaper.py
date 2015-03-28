@@ -62,4 +62,4 @@ c = conn.cursor()
 data_table = list(c.execute('SELECT * FROM data'))
 
 # The current wallpaper is the last element in the data table.
-print("{}/{}".format(wallpaper_dir,data_table[-1][0]))
+print("{}/{}".format(wallpaper_dir, data_table[-1][0]))
