@@ -8,6 +8,10 @@ This script (music-organizer.py) organizes my music collection for
 iTunes and [mpv](http://mpv.io) using tag information.
 The directory structure is `<artist>/<track>`, where `<artist>` and `<track>`
 are lower case strings separated by dashes.
+
+See my blog post
+[Using Python to organize a music directory](http://bamos.github.io/2014/07/05/music-organizer/)
+for a more detailed overview of this script.
 """
 
 import argparse
