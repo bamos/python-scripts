@@ -13,7 +13,7 @@ import ast
 import glob
 import os
 from jinja2 import Template
-from subprocess import Popen,PIPE
+from subprocess import Popen, PIPE
 
 readme = Template("""
 [![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
@@ -74,15 +74,16 @@ and I'm happy to merge pull requests of other projects.
 {{similar_projects}}
 """)
 
+
 def get_docstr(filename):
     print("  + get_docstr({})".format(filename))
     with open(filename) as f:
         script = ast.parse(f.read())
         try:
-            authors,date,desc = map(lambda x: ast.literal_eval(x.value),
-                                    script.body[0:3])
+            authors, date, desc = map(lambda x: ast.literal_eval(x.value),
+                                      script.body[0:3])
         except:
-            print("    + Error reading (author,date,desc).")
+            print("    + Error reading (author, date, desc).")
             raise
         return """
 ## [{}](https://github.com/bamos/python-scripts/blob/master/{})
@@ -92,31 +93,34 @@ def get_docstr(filename):
 {}
 """.format(filename, filename, ", ".join(authors), date, desc)
 
+
 def get_descriptions():
     print("# Getting project descriptions")
     return ("\n".join(map(get_docstr,
-                          ['generate-readme.py']+glob.glob("python*/*.py"))))
+                          ['generate-readme.py'] + glob.glob("python*/*.py"))))
+
 
 def get_similar_projects():
     print("# Getting similar projects")
-    projs =['gpambrozio/PythonScripts',
-            'ClarkGoble/Scripts',
-            'gpambrozio/PythonScripts',
-            'realpython/python-scripts',
-            'averagesecurityguy/Python-Examples',
-            'computermacgyver/twitter-python']
+    projs = ['gpambrozio/PythonScripts',
+             'ClarkGoble/Scripts',
+             'gpambrozio/PythonScripts',
+             'realpython/python-scripts',
+             'averagesecurityguy/Python-Examples',
+             'computermacgyver/twitter-python']
     cmd = ['./python3/github-repo-summary.py'] + projs
     p = Popen(cmd, stdout=PIPE)
-    out,err = p.communicate()
+    out, err = p.communicate()
     return out.decode()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     # cd into the script directory.
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
 
-    with open("README.md","w") as f:
+    with open("README.md", "w") as f:
         f.write(readme.render(
             descriptions=get_descriptions(),
             similar_projects=get_similar_projects()
