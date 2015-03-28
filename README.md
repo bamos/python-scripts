@@ -45,7 +45,7 @@ to ensure `requirements-{2,3}.txt` have all of the Python 2 and Python 3 scripts
 and that there are no careless errors that cause the scripts to
 not execute the help message.
 [pep8](https://github.com/jcrocholl/pep8) will fail the build
-pep8 styling conventions aren't met.
+if pep8 styling conventions aren't met.
 
 # Scripts
 
