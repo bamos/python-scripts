@@ -1,0 +1,24 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+
+install:
+  - [[ $TRAVIS_PYTHON_VERSION == 2* ]] && pip install -r requirements-2.txt
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && pip install -r requirements-3.txt
+
+# Ensure `requirements.txt` contains all of the dependencies
+# for the scripts and that scripts that only operate on
+# command-line arguments can be executed.
+script:
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./generate-readme.py
+  - [[ $TRAVIS_PYTHON_VERSION == 2* ]] && ./python2.7/music-organizer.py --help
+  - [[ $TRAVIS_PYTHON_VERSION == 2* ]] && ./python2.7/mt.py --help
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./python3/github-repo-summary.py bamos/python-scripts
+  # Requires customization: ./python3/link-checker.py
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./python3/phonetic.py github
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./python3/rank-writing.py README.md
+  # OSX only: ./python3/get-osx-wallpaper.py
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./python3/word-counter.py README.md
+  - [[ $TRAVIS_PYTHON_VERSION == 3* ]] && ./python3/eval-expr.py '(((4+6)*10)<<2)'
+  - [[ $TRAVIS_PYTHON_VERSION == 2* ]] && ./python3/merge-mutt-contacts.py --help
