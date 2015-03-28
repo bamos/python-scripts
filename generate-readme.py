@@ -20,13 +20,13 @@ readme = Template("""
 [![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
 
 This is a collection of short Python scripts use in Linux.
+Portions of this README are automatically generated with
+[generate-readme.py](https://github.com/bamos/python-scripts#generate-readmepy).
+
+# Adding to your PATH
 I have these added to my `PATH`
 [variable](https://wiki.archlinux.org/index.php/Environment_variables)
 to run from anywhere.
-The script contents in this README have been
-[automatically generated](https://github.com/bamos/python-scripts#generate-readmepy).
-
-# Adding to your PATH
 Clone the repo and add the following
 to your `bashrc` or `zshrc`, replacing `<python-scripts>`
 with the location of the cloned repository.
@@ -58,8 +58,9 @@ calls
 [.travis-script-2.sh](https://github.com/bamos/python-scripts/blob/master/.travis-script-2.sh)
 and
 [.travis-script-3.sh](https://github.com/bamos/python-scripts/blob/master/.travis-script-3.sh)
-to ensure `requirements.txt` has all of the Python 2 and Python 3 scripts
-and that there are no careless errors.
+to ensure `requirements-{2,3}.txt` have all of the Python 2 and Python 3 scripts
+and that there are no careless errors that cause the scripts to
+not execute the help message.
 [pep8](https://github.com/jcrocholl/pep8) will fail the build
 pep8 styling conventions aren't met.
 
