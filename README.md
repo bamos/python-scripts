@@ -213,17 +213,19 @@ The script uses PyPDF2 to merge the documents and to extract the
 number of pages in the input documents and ghostscript to create a
 blank PDF page.
 
-    $ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
-    a.pdf
-     + Pages: 6
-     + Added 2 blank pages.
-    b.pdf
-     + Pages: 13
-     + Added 3 blank pages.
-    c.pdf
-     + Pages: 13
-     + Added 3 blank pages.
-    Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
+```
+$ merge-pdfs-printable.py a.pdf b.pdf c.pdf --modulo 4
+a.pdf
+  + Pages: 6
+  + Added 2 blank pages.
+b.pdf
+  + Pages: 13
+  + Added 3 blank pages.
+c.pdf
+  + Pages: 13
+  + Added 3 blank pages.
+Merged output is in '/tmp/tmpm2n5g0mh-merge.pdf'.
+```
 
 Note: Some of my decrypted PDF documents have resulted in
 PyPDF2.utils.PdfReadError: file has not been decrypted. My current
@@ -243,22 +245,22 @@ Count work frequencies within a file.
 $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
 
 === Sliding Window: 1 ===
-  3473: 'shall'
-  2238: 'would'
-  2153: 'which'
-  2074: 'their'
+    3473: 'shall'
+    2238: 'would'
+    2153: 'which'
+    2074: 'their'
 
 === Sliding Window: 2 ===
-  248: 'exeunt scene'
-  117: 'second lord.'
-  105: 'first lord.'
-  102: 'queen elizabeth.'
+    248: 'exeunt scene'
+    117: 'second lord.'
+    105: 'first lord.'
+    102: 'queen elizabeth.'
 
 === Sliding Window: 3 ===
-  36: 'william shakespeare dramatis'
-  34: 'shakespeare dramatis personae'
-  18: 'comes here? enter'
-  14: 'duke's palace enter'
+    36: 'william shakespeare dramatis'
+    34: 'shakespeare dramatis personae'
+    18: 'comes here? enter'
+    14: 'duke's palace enter'
 ```
 
 
