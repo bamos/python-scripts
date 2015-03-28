@@ -68,6 +68,8 @@ not execute the help message.
 if pep8 styling conventions aren't met.
 
 # Scripts
+The subheadings link to the script contents on GitHub.
+
 {{descriptions}}
 
 # Similar Projects
