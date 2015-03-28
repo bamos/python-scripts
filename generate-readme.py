@@ -21,7 +21,7 @@ readme = Template("""
 [![Build Status](https://travis-ci.org/bamos/python-scripts.svg)](https://travis-ci.org/bamos/python-scripts)
 [![Dependency Status](https://gemnasium.com/bamos/python-scripts.svg)](https://gemnasium.com/bamos/python-scripts)
 
-This is a collection of short Python scripts use in Linux.
+This is a collection of short Python scripts I use in Linux.
 Portions of this README are automatically generated with
 [generate-readme.py](https://github.com/bamos/python-scripts#generate-readmepy)
 to insert the script-level comments as descriptions below.
