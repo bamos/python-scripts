@@ -6,6 +6,7 @@ python:
 install:
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r requirements-2.txt; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then pip install -r requirements-3.txt; fi
+  - pip install pep8
 
 # Ensure `requirements.txt` contains all of the dependencies
 # for the scripts and that scripts that only operate on
