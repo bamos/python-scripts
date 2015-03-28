@@ -49,6 +49,8 @@ not execute the help message.
 if pep8 styling conventions aren't met.
 
 # Scripts
+The subheadings link to the script contents on GitHub.
+
 
 ## [generate-readme.py](https://github.com/bamos/python-scripts/blob/master/generate-readme.py)
 + Authors: [Brandon Amos](http://github.com/bamos)
