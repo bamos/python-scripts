@@ -4,7 +4,8 @@
 
 This is a collection of short Python scripts use in Linux.
 Portions of this README are automatically generated with
-[generate-readme.py](https://github.com/bamos/python-scripts#generate-readmepy).
+[generate-readme.py](https://github.com/bamos/python-scripts#generate-readmepy)
+to insert the script-level comments as descriptions below.
 
 # Adding to your PATH
 I have these added to my `PATH`
@@ -55,8 +56,10 @@ if pep8 styling conventions aren't met.
 
 
 Generates the README for
-[bamos/python-scripts](https://github.com/bamos/python-scripts).
-Script descriptions are obtained by parsing the docstrings.
+[bamos/python-scripts](https://github.com/bamos/python-scripts)
+so that the README and scripts contain synchronized documentation.
+Script descriptions are obtained by parsing the docstrings
+and inserted directly into the README as markdown.
 
 
 
