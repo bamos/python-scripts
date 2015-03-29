@@ -108,8 +108,7 @@ def get_descriptions():
 
 def get_similar_projects():
     print("# Getting similar projects")
-    projs = ['gpambrozio/PythonScripts',
-             'ClarkGoble/Scripts',
+    projs = ['ClarkGoble/Scripts',
              'gpambrozio/PythonScripts',
              'realpython/python-scripts',
              'averagesecurityguy/Python-Examples',
