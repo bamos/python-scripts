@@ -66,7 +66,7 @@ and inserted directly into the README as markdown.
 
 
 ## [python2.7/music-organizer.py](https://github.com/bamos/python-scripts/blob/master/python2.7/music-organizer.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.04.19
 
 
@@ -82,7 +82,7 @@ for a more detailed overview of this script.
 
 
 ## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.30
 
 
@@ -94,7 +94,7 @@ of the output.
 
 
 ## [python3/github-repo-summary.py](https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.02
 
 
@@ -103,7 +103,7 @@ Produces a Markdown table concisely summarizing a list of GitHub repositories.
 
 
 ## [python3/link-checker.py](https://github.com/bamos/python-scripts/blob/master/python3/link-checker.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.02.06
 
 
@@ -117,7 +117,7 @@ to hide warnings and to send a concise email if bad links are found.
 
 
 ## [python3/phonetic.py](https://github.com/bamos/python-scripts/blob/master/python3/phonetic.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.02.14
 
 
@@ -136,7 +136,7 @@ b - bravo
 
 
 ## [python3/rank-writing.py](https://github.com/bamos/python-scripts/blob/master/python3/rank-writing.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.02.14
 
 
@@ -170,7 +170,7 @@ Total: 0
 
 
 ## [python3/get-osx-wallpaper.py](https://github.com/bamos/python-scripts/blob/master/python3/get-osx-wallpaper.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2015.03.25
 
 
@@ -221,7 +221,7 @@ alias rm-wallpaper='rm $(get-osx-wallpaper.py) && killall Dock'
 
 
 ## [python3/merge-pdfs-printable.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-pdfs-printable.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.10.17
 
 
@@ -258,7 +258,7 @@ PS file.
 
 
 ## [python3/word-counter.py](https://github.com/bamos/python-scripts/blob/master/python3/word-counter.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.7
 
 
@@ -289,14 +289,14 @@ $ word-counter.py shakespeare.md --numWords 4 --maxTuples 3
 
 
 ## [python3/eval-expr.py](https://github.com/bamos/python-scripts/blob/master/python3/eval-expr.py)
-+ Authors: J. Sebastian, [Brandon Amos](https://github.com/bamos)
++ Authors: J. Sebastian, [Brandon Amos](http://bamos.github.io)
 + Created: 2013.08.01
 
 
 A module to evaluate a mathematical expression using Python's AST.
 
 + Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
-+ Modifications by: [Brandon Amos](https://github.com/bamos).
++ Modifications by: [Brandon Amos](http://bamos.github.io).
 
 If you want a command-line expression evaluator, use
 [Russell91/pythonpy](https://github.com/Russell91/pythonpy).
@@ -310,7 +310,7 @@ $ eval-expr.py '(((4+6)*10)<<2)'
 
 
 ## [python3/merge-mutt-contacts.py](https://github.com/bamos/python-scripts/blob/master/python3/merge-mutt-contacts.py)
-+ Authors: [Brandon Amos](https://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.01.08
 
 
@@ -325,8 +325,8 @@ and I'm happy to merge pull requests of other projects.
 
 Name | Stargazers | Description
 ----|----|----
-[averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 16 | Example scripts for common python tasks
-[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 25 | My scripts - primarily using python and appscript
-[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 38 | Simple example scripts for Twitter data collection with Tweepy in Python
+[averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 18 | Example scripts for common python tasks
+[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 26 | My scripts - primarily using python and appscript
+[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 40 | Simple example scripts for Twitter data collection with Tweepy in Python
 [gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 40 | A bunch of Python scripts I made and that might interest somebody else
-[realpython/python-scripts](https://github.com/realpython/python-scripts) | 49 | because i'm tired of gists
+[realpython/python-scripts](https://github.com/realpython/python-scripts) | 56 | because i'm tired of gists
