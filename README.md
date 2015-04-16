@@ -53,7 +53,7 @@ The subheadings link to the script contents on GitHub.
 
 
 ## [generate-readme.py](https://github.com/bamos/python-scripts/blob/master/generate-readme.py)
-+ Authors: [Brandon Amos](http://github.com/bamos)
++ Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2015.03.27
 
 
