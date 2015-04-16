@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-__author__ = ['[Brandon Amos](https://github.com/bamos)']
+__author__ = ['[Brandon Amos](http://bamos.github.io)']
 __date__ = '2014.10.17'
 
 """

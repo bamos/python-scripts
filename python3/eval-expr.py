@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-__author__ = ['J. Sebastian', '[Brandon Amos](https://github.com/bamos)']
+__author__ = ['J. Sebastian', '[Brandon Amos](http://bamos.github.io)']
 __date__ = '2013.08.01'
 
 """
 A module to evaluate a mathematical expression using Python's AST.
 
 + Original by: J. Sebastian at http://stackoverflow.com/questions/2371436.
-+ Modifications by: [Brandon Amos](https://github.com/bamos).
++ Modifications by: [Brandon Amos](http://bamos.github.io).
 
 If you want a command-line expression evaluator, use
 [Russell91/pythonpy](https://github.com/Russell91/pythonpy).
