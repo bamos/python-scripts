@@ -12,10 +12,10 @@ delete the current wallpaper.
 
 
 ### Warning
-+ This approach doesn't work with multiple monitors.
++ This approach doesn't work with multiple monitors or virtual desktops.
 
 ### Tested On
-+ OSX Yosemite 10.10.2 with a single monitor on a MBP.
++ OSX Yosemite 10.10.2 with a single desktop on a MBP.
 
 ### Usage
 Ensure `db_path` and `wallpaper_dir` are correctly set below.
@@ -60,6 +60,8 @@ wallpaper_dir = expanduser("~/Pictures/wallpaper/nature")
 conn = sqlite3.connect(db_path)
 c = conn.cursor()
 data_table = list(c.execute('SELECT * FROM data'))
+
+print(data_table)
 
 # The current wallpaper is the last element in the data table.
 print("{}/{}".format(wallpaper_dir, data_table[-1][0]))
