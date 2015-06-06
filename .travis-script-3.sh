@@ -2,6 +2,7 @@
 set -x -e # Show commands being executed and exit nonzero upon errors.
 
 ./generate-readme.py
+./python3/delete-duplicates.py --help
 ./python3/github-repo-summary.py bamos/python-scripts
 # Requires customization: ./python3/link-checker.py
 ./python3/phonetic.py github
