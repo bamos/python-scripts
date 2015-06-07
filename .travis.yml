@@ -4,7 +4,7 @@ python:
   - "3.4"
 
 install:
-  - sudo apt-get -qq install libfreetype6-dev liblcms2-dev python-qt4 ghostscript libffi-dev libjpeg-turbo-progs cmake imagemagick
+  - sudo apt-get -qq install libatlas-base-dev
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r requirements-2.txt; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then pip install -r requirements-3.txt; fi
   - pip install pep8
