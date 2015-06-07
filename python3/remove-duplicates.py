@@ -10,6 +10,7 @@ http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html
 """
 
 import argparse
+import hashlib
 import imagehash
 import os
 import sys
@@ -62,6 +63,12 @@ def runOnClass(args, imgs):
                 imgs.remove(largestImg)
                 for img in imgs:
                     os.remove(img)
+
+            if args.sha256:
+                print("")
+                for img in imgs:
+                    print(hashlib.sha256(open(img, 'rb').read()).hexdigest())
+                print("")
     return numFound
 
 if __name__ == '__main__':
@@ -72,6 +79,8 @@ if __name__ == '__main__':
     parser.add_argument('--delete', action='store_true',
                         help="Delete the smallest duplicate images instead "
                         "of just listing them.")
+    parser.add_argument('--sha256', action='store_true',
+        help="Show sha256 sum for duplicate images")
     args = parser.parse_args()
 
     numFound = 0
