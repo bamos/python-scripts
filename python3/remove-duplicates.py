@@ -80,7 +80,7 @@ if __name__ == '__main__':
                         help="Delete the smallest duplicate images instead "
                         "of just listing them.")
     parser.add_argument('--sha256', action='store_true',
-        help="Show sha256 sum for duplicate images")
+                        help="Show sha256 sum for duplicate images")
     args = parser.parse_args()
 
     numFound = 0
