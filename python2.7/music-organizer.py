@@ -65,7 +65,7 @@ def toNeat(s):
     s = s.lower().replace("&", "and")
 
     # Put spaces between and remove blank characters.
-    blankCharsPad = r"()\[\],.\\\?\#/\!\$\:"
+    blankCharsPad = r"()\[\],.\\\?\#/\!\$\:\;"
     blankCharsNoPad = r"'\""
     s = re.sub(r"([" + blankCharsPad + r"])([^ ])", "\\1 \\2", s)
     s = re.sub("[" + blankCharsPad + blankCharsNoPad + "]", "", s)
