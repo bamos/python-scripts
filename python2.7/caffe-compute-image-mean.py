@@ -15,8 +15,8 @@ from skimage import io
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('meanPrefix', type=str, help="TODO")
-    parser.add_argument('imageDir', type=str, help="TODO")
+    parser.add_argument('meanPrefix', type=str, help="Prefix of the mean file.")
+    parser.add_argument('imageDir', type=str, help="Directory of images to read.")
     args = parser.parse_args()
 
     exts = ["jpg", "png"]
