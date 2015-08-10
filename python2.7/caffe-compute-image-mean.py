@@ -1,5 +1,12 @@
 #!/usr/bin/env python2
 
+__author__ = ['[Brandon Amos](http://bamos.github.io)']
+__date__ = '2015.08.10'
+
+"""
+This script computes the mean of a directory of images for Caffe.
+"""
+
 import sys
 sys.path.append("/home/bamos/repos/caffe-local/python")
 
