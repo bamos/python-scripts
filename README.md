@@ -65,6 +65,15 @@ and inserted directly into the README as markdown.
 
 
 
+## [python2.7/caffe-compute-image-mean.py](https://github.com/bamos/python-scripts/blob/master/python2.7/caffe-compute-image-mean.py)
++ Authors: [Brandon Amos](http://bamos.github.io)
++ Created: 2015.08.10
+
+
+This script computes the mean of a directory of images for Caffe.
+
+
+
 ## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.30
@@ -337,7 +346,7 @@ and I'm happy to merge pull requests of other projects.
 Name | Stargazers | Description
 ----|----|----
 [averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 20 | Example scripts for common python tasks
-[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 26 | My scripts - primarily using python and appscript
-[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 45 | Simple example scripts for Twitter data collection with Tweepy in Python
-[gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 39 | A bunch of Python scripts I made and that might interest somebody else
-[realpython/python-scripts](https://github.com/realpython/python-scripts) | 59 | because i'm tired of gists
+[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 28 | My scripts - primarily using python and appscript
+[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 50 | Simple example scripts for Twitter data collection with Tweepy in Python
+[gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 38 | A bunch of Python scripts I made and that might interest somebody else
+[realpython/python-scripts](https://github.com/realpython/python-scripts) | 66 | because i'm tired of gists
