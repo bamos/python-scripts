@@ -32,15 +32,15 @@ if __name__ == '__main__':
             if any(imageName.lower().endswith("." + ext) for ext in exts):
                 img = io.imread(os.path.join(subdir, fName))
                 if img.shape == (152, 152, 3):
-                    mean[0][0] += img[:,:,0]
-                    mean[0][1] += img[:,:,1]
-                    mean[0][2] += img[:,:,2]
+                    mean[0][0] += img[:, :, 0]
+                    mean[0][1] += img[:, :, 1]
+                    mean[0][2] += img[:, :, 2]
                     N += 1
                     if N % 1000 == 0:
                         elapsed = time.time() - beginTime
                         print("Processed {} images in {:.2f} seconds. "
                               "{:.2f} images/second.".format(N, elapsed,
-                                                             N/elapsed))
+                                                             N / elapsed))
     mean[0] /= N
 
     blob = array_to_blobproto(mean)
