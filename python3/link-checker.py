@@ -27,7 +27,7 @@ email_to = ENTER_TO_EMAIL
 email_from = ENTER_FROM_EMAIL
 root_url = ENTER_URL
 
-cmd = ["linkchecker", "--no-warnings", "--no-status", root_url]
+cmd = ["linkchecker", "--no-warnings", "--no-status", "--external", root_url]
 output = Popen(cmd, stdout=PIPE).communicate()[0].decode("UTF-8")
 
 bad_urls = []
