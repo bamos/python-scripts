@@ -165,7 +165,7 @@ $ rm $(get-osx-wallpaper.py) && killall Dock
 ```
 
 Example alias definitions for bash and zsh are available in
-https://github.com/bamos/dotfiles/blob/master/.aliases:
+https://github.com/bamos/dotfiles/blob/master/.funcs:
 
 ```
 alias open-wallpaper='open $(get-osx-wallpaper.py)'
@@ -349,4 +349,4 @@ Name | Stargazers | Description
 [ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 28 | My scripts - primarily using python and appscript
 [computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 50 | Simple example scripts for Twitter data collection with Tweepy in Python
 [gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 38 | A bunch of Python scripts I made and that might interest somebody else
-[realpython/python-scripts](https://github.com/realpython/python-scripts) | 66 | because i'm tired of gists
+[realpython/python-scripts](https://github.com/realpython/python-scripts) | 67 | because i'm tired of gists
