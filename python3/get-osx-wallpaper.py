@@ -41,7 +41,7 @@ $ rm $(get-osx-wallpaper.py) && killall Dock
 ```
 
 Example alias definitions for bash and zsh are available in
-https://github.com/bamos/dotfiles/blob/master/.aliases:
+https://github.com/bamos/dotfiles/blob/master/.funcs:
 
 ```
 alias open-wallpaper='open $(get-osx-wallpaper.py)'
