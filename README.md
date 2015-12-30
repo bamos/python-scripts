@@ -74,6 +74,15 @@ This script computes the mean of a directory of images for Caffe.
 
 
 
+## [python2.7/fix-music-tags.py](https://github.com/bamos/python-scripts/blob/master/python2.7/fix-music-tags.py)
++ Authors: [Brandon Amos](http://bamos.github.io)
++ Created: 2015.12.30
+
+
+This script (fix-music-tags.py) mass-removes unwanted music tags.
+
+
+
 ## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.30
@@ -345,8 +354,8 @@ and I'm happy to merge pull requests of other projects.
 
 Name | Stargazers | Description
 ----|----|----
-[averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 20 | Example scripts for common python tasks
-[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 28 | My scripts - primarily using python and appscript
-[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 50 | Simple example scripts for Twitter data collection with Tweepy in Python
+[averagesecurityguy/Python-Examples](https://github.com/averagesecurityguy/Python-Examples) | 22 | Example scripts for common python tasks
+[ClarkGoble/Scripts](https://github.com/ClarkGoble/Scripts) | 29 | My scripts - primarily using python and appscript
+[computermacgyver/twitter-python](https://github.com/computermacgyver/twitter-python) | 62 | Simple example scripts for Twitter data collection with Tweepy in Python
 [gpambrozio/PythonScripts](https://github.com/gpambrozio/PythonScripts) | 38 | A bunch of Python scripts I made and that might interest somebody else
-[realpython/python-scripts](https://github.com/realpython/python-scripts) | 67 | because i'm tired of gists
+[realpython/python-scripts](https://github.com/realpython/python-scripts) | 549 | because i'm tired of gists
