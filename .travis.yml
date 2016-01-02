@@ -1,10 +1,15 @@
+sudo: False
 language: python
 python:
   - "2.7"
   - "3.4"
+addons:
+  apt:
+    packages:
+      - gfortran
+      - libatlas-base-dev
 
 install:
-  - sudo apt-get -qq install libatlas-base-dev gfortran
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r requirements-2.txt; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_wait pip install -r requirements-3.txt; fi
   - pip install pep8
