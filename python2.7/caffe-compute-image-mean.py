@@ -15,7 +15,6 @@ import numpy as np
 import os
 import time
 
-from caffe.proto import caffe_pb2
 from caffe.io import array_to_blobproto
 from collections import defaultdict
 from skimage import io

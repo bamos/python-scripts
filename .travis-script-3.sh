@@ -13,5 +13,5 @@ set -x -e # Show commands being executed and exit nonzero upon errors.
 ./python3/merge-mutt-contacts.py --help
 
 for F in generate-readme.py python3/*; do
-  pep8 --ignore=E402,E501 $F
+  flake8 --ignore=E402,E501 $F
 done

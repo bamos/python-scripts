@@ -37,7 +37,6 @@ PS file.
 
 import argparse
 import os
-import re
 import subprocess
 import tempfile
 
@@ -87,7 +86,7 @@ def merge_pdfs(f_names):
     out_file = "merged.pdf"  # tempfile.mktemp("-merge.pdf")
     with open(out_file, 'wb') as f:
         merger.write(f)
-    [f.close() for f in fps]
+    [fp.close() for fp in fps]
     print("Merged output is in '{}'.".format(out_file))
 
 if __name__ == '__main__':

@@ -9,7 +9,6 @@ Produces a Markdown table concisely summarizing a list of GitHub repositories.
 
 from github import Github
 import argparse
-import time
 import os
 import sys
 
@@ -30,8 +29,7 @@ for r_name in sorted(args.repos, key=lambda v: v.upper()):
     try:
         r = github.get_repo(r_name)
     except:
-        print("Error: Repository '{}' not found.".format(r_name),
-              file=sys.stderr)
+        sys.stderr.write("Error: Repository '{}' not found.\n".format(r_name))
         sys.exit(-1)
     content = " | ".join([
         "[{}]({})".format(r.full_name, r.html_url),

@@ -21,11 +21,11 @@ import smtplib
 # Settings to send emails with SMTP with gmail.
 server = "smtp.gmail.com"
 port = 587
-user = ENTER_USER
-pw = ENTER_PW  # Please use an application-specific password for security!
-email_to = ENTER_TO_EMAIL
-email_from = ENTER_FROM_EMAIL
-root_url = ENTER_URL
+user = 'ENTER_USER'
+pw = 'ENTER_PW'  # Please use an application-specific password for security!
+email_to = 'ENTER_TO_EMAIL'
+email_from = 'ENTER_FROM_EMAIL'
+root_url = 'ENTER_URL'
 
 cmd = ["linkchecker", "--no-warnings", "--no-status", "--external", root_url]
 output = Popen(cmd, stdout=PIPE).communicate()[0].decode("UTF-8")

@@ -14,9 +14,6 @@ import glob
 
 def fixTags(fname, keep):
     audio = EasyID3(fname)
-    artist = audio['artist']
-    title = audio['title']
-    album = audio['album']
 
     delKeys = []
     for k, v in audio.items():

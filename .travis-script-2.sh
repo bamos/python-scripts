@@ -5,5 +5,5 @@ set -x -e # Show commands being executed and exit nonzero upon errors.
 ./python2.7/mt.py --help
 
 for F in python2.7/*; do
-  pep8 --ignore=E402,E501 $F
+  flake8 --ignore=E402,E501 $F
 done

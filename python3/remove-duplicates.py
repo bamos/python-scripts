@@ -13,7 +13,6 @@ import argparse
 import hashlib
 import imagehash
 import os
-import sys
 
 from collections import defaultdict
 from PIL import Image
@@ -27,7 +26,8 @@ def getImgs(d):
     for subdir, dirs, files in os.walk(d):
         imgs = []
         for fName in files:
-            (imageClass, imageName) = (os.path.basename(subdir), fName)
+            # (imageClass, imageName) = (os.path.basename(subdir), fName)
+            imageName = fName
             if any(imageName.lower().endswith("." + ext) for ext in exts):
                 imgs.append(os.path.join(subdir, fName))
         imgClasses.append(imgs)
