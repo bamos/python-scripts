@@ -15,6 +15,7 @@ for a more detailed overview of this script.
 """
 
 import argparse
+import glob
 import os
 import re
 import shutil
@@ -194,7 +195,7 @@ def song(filename):
 
 
 def collection():
-    for f in os.listdir("."):
+    for f in glob.glob('*'):
         if os.path.isdir(f):
             if f != 'iTunes' and f != 'playlists':
                 artist(f)
