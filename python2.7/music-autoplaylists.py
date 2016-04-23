@@ -16,6 +16,7 @@ import sys
 from mutagen.easyid3 import EasyID3
 from collections import defaultdict
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--musicDir', type=str, default='.')
@@ -24,9 +25,11 @@ def main():
 
     genres = defaultdict(list)
     for dpath, dnames, fnames in os.walk(args.musicDir):
-        if '.git' in dpath: continue
+        if '.git' in dpath:
+            continue
         for fname in fnames:
-            if os.path.splitext(fname)[1] != '.mp3': continue
+            if os.path.splitext(fname)[1] != '.mp3':
+                continue
             p = os.path.abspath(os.path.join(dpath, fname))
             audio = EasyID3(p)
             if 'genre' in audio:
@@ -41,13 +44,15 @@ def main():
     os.makedirs(args.playlistDir)
 
     for genre, songs in genres.items():
-        p = os.path.join(args.playlistDir, genre+'.m3u')
+        p = os.path.join(args.playlistDir, genre + '.m3u')
         print("Creating playlist: {}".format(p))
         with open(p, 'w') as f:
             f.write("#EXTM3U\n")
-            f.write("\n".join(sorted(songs))+"\n")
+            f.write("\n".join(sorted(songs)) + "\n")
 
 # Maps a string such as 'The Beatles' to 'the-beatles'.
+
+
 def toNeat(s):
     s = s.lower().replace("&", "and")
 
