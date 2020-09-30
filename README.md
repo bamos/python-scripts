@@ -70,7 +70,7 @@ and inserted directly into the README as markdown.
 + Created: 2014.04.19
 
 
-This script (music-organizer.py) organizes my music collection for
+This scripts (music-organizer.py) organizes my music collection for
 iTunes and [mpv](http://mpv.io) using tag information.
 The directory structure is `<artist>/<track>`, where `<artist>` and `<track>`
 are lower case strings separated by dashes.
@@ -81,19 +81,19 @@ for a more detailed overview of this script.
 
 
 
-## [python2.7/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
+## [python3.5/mt.py](https://github.com/bamos/python-scripts/blob/master/python2.7/mt.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.30
 
 
-This script implements the simple
+This scripts implements the simple
 [multitail](https://pypi.python.org/pypi/multitail)
 example to tail multiple files and append the filename to the beginning
 of the output.
 
 
 
-## [python2.7/caffe-compute-image-mean.py](https://github.com/bamos/python-scripts/blob/master/python2.7/caffe-compute-image-mean.py)
+## [python3.5/caffe-compute-image-mean.py](https://github.com/bamos/python-scripts/blob/master/python2.7/caffe-compute-image-mean.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2015.08.10
 
@@ -102,16 +102,16 @@ This script computes the mean of a directory of images for Caffe.
 
 
 
-## [python2.7/fix-music-tags.py](https://github.com/bamos/python-scripts/blob/master/python2.7/fix-music-tags.py)
+## [python3.5/fix-music-tags.py](https://github.com/bamos/python-scripts/blob/master/python2.7/fix-music-tags.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2015.12.30
 
 
-This script (fix-music-tags.py) mass-removes unwanted music tags.
+This scripts (fix-music-tags.py) mass-removes unwanted music tags.
 
 
 
-## [python3/github-repo-summary.py](https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py)
+## [python3.5/github-repo-summary.py](https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.11.02
 
@@ -120,7 +120,7 @@ Produces a Markdown table concisely summarizing a list of GitHub repositories.
 
 
 
-## [python3/link-checker.py](https://github.com/bamos/python-scripts/blob/master/python3/link-checker.py)
+## [python3.5/link-checker.py](https://github.com/bamos/python-scripts/blob/master/python3/link-checker.py)
 + Authors: [Brandon Amos](http://bamos.github.io)
 + Created: 2014.02.06
 
