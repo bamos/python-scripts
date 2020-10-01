@@ -33,5 +33,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     for fname in glob.glob("{}/*.mp3".format(args.directory)):
-        print("Fixing tags for {}".format(fname))
+        print("Fixing music tags for {}".format(fname))
         fixTags(fname, args.keep)
