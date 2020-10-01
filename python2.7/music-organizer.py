@@ -5,7 +5,7 @@ __date__ = '2014.04.19'
 
 """
 This script (music-organizer.py) organizes my music collection for
-iTunes and [mpv](http://mpv.io) using tag information.
+iTunes and [mpv](http://mpv.io) using information based on different tags.
 The directory structure is `<artist>/<track>`, where `<artist>` and `<track>`
 are lower case strings separated by dashes.
 
@@ -46,7 +46,7 @@ parser.add_argument('--collection', action='store_true',
                     help='''Operate in 'collection' mode and run 'artist' mode
                     on every subdirectory.''')
 parser.add_argument('--artist', action='store_true',
-                    help='''Operate in 'artist' mode and copy all songs to the
+                    help='''Operate in 'artist' mode and copy all the songs to the
                     root of the directory and cleanly format the names to
                     be easily typed and navigated in a shell.''')
 parser.add_argument('--delete-unrecognized-extensions', action='store_true',
@@ -104,7 +104,7 @@ def artist(artistDir):
             while True:
                 print("Warning: More than 2 artists found in '{}'.".format(
                     artistDir))
-                print("This will move all songs to the '{}' directory.".format(
+                print("This will move all the songs to the '{}' directory.".format(
                     artistDir))
                 print("Continue? yes/no")
                 choice = raw_input().lower()
