@@ -142,9 +142,9 @@ to hide warnings and to send a concise email if bad links are found.
 Obtain the NATO phonetic alphabet representation from short phrases.
 
 ```
-$ phonetic.py github
+$ phonetic.py GitHub
 g - golf
-i - india
+i - India
 t - tango
 h - hotel
 u - uniform
