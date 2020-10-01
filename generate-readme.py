@@ -75,7 +75,7 @@ The subheadings link to the script contents on GitHub.
 # Similar Projects
 There are many potpourri Python script repositories on GitHub.
 The following list shows a short sampling of projects,
-and I'm happy to merge pull requests of other projects.
+and I'm happy to merge pull requests of all other projects.
 
 {{similar_projects}}
 """)
