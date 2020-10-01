@@ -27,7 +27,7 @@ pathadd <python-scripts>/python2.7
 pathadd <python-scripts>/python3
 ```
 
-# Dependencies
+# Dependencies on idel of python
 These scripts are written in Python 3 except when external
 libraries don't support Python 3.
 Dependencies for Python 2 and 3 for all scripts are
