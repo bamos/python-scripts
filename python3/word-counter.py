@@ -1,3 +1,4 @@
+#an awesome and cool prooject
 #!/usr/bin/env python3
 
 __author__ = ['[Brandon Amos](http://bamos.github.io)']
